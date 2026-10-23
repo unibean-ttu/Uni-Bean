@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uni-Bean 豆有所應｜官方入口</title>
+
+  <style>
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: "Microsoft JhengHei", system-ui, sans-serif;
+      color: #263445;
+      background: #f5f7fa;
+    }
+
+    main {
+      width: min(100%, 520px);
+      padding: 42px 30px;
+      border: 1px solid #e2e7ee;
+      border-radius: 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .label {
+      color: #967458;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    h1 { margin-bottom: 8px; font-size: 38px; }
+    h2 { margin-top: 0; font-size: 21px; font-weight: 500; }
+    p { color: #667085; line-height: 1.9; }
+
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 13px 24px;
+      border-radius: 9px;
+      color: white;
+      background: #42668a;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #667085;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="label">CAMPUS INFORMATION</div>
+
+    <h1>Uni-Bean</h1>
+    <h2>豆有所應</h2>
+
+    <p>你有需要，豆有回應！</p>
+
+    <p id="notice">
+      系統建置中。<br>
+      正式開放後，可由此頁進入。
+    </p>
+
+    <a id="enter" hidden>進入 Uni-Bean →</a>
+
+    <footer>
+      大同大學資訊經營學系<br>
+      畢業專題
+    </footer>
+  </main>
+
+  <script>
+    // 系統正式上線後，在引號內填入公開網址。
+    const systemUrl = "";
+
+    if (systemUrl) {
+      const entrance = document.getElementById("enter");
+      entrance.href = systemUrl;
+      entrance.hidden = false;
+
+      document.getElementById("notice").textContent =
+        "歡迎使用校園資訊查詢服務。";
+    }
+  </script>
+</body>
+</html>
