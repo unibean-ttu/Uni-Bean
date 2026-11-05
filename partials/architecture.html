@@ -1,0 +1,140 @@
+<section class="hidden flex-1 flex-col h-full overflow-y-auto bg-bean-creamWhite p-4 sm:p-6 lg:p-8" id="tab-panel-architecture">
+<div class="max-w-5xl mx-auto w-full space-y-6 pb-10">
+<!-- 專題摘要橫幅 -->
+<div class="bg-bean-forest text-white rounded-2xl p-6 shadow-md relative overflow-hidden">
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bean-mint text-bean-forestDark text-xs font-bold mb-3">
+<i class="fa-solid fa-award"></i>
+<span>大同大學 資訊經營學系 畢業專題</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold">Uni-Bean 豆有所應：你有需要，豆有回應！</h2>
+<p class="text-sm text-bean-creamGreen/90 mt-2 max-w-3xl leading-relaxed">
+                結合 <strong>BM25 關鍵字檢索</strong> 與 <strong>Ollama 本地端大型語言模型 (LLM)</strong> 之輕量化校務 RAG 問答系統。免除昂貴商業 API
+                費用與傳統 XAMPP 笨重環境，打造具備「原始文件來源標註」的跨裝置 PWA 校園服務。
+              </p>
+</div>
+</div>
+<!-- RWD 響應式裝置呈現對照表 (完全對應專題規格) -->
+<div class="bg-white rounded-2xl p-6 border border-bean-creamGreen shadow-soft">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-lg font-bold text-bean-ink flex items-center gap-2">
+<i class="fa-solid fa-laptop-mobile text-bean-forest"></i>
+<span>RWD 響應式網頁設計 ＋ PWA 跨裝置自動調適規格表</span>
+</h3>
+<p class="text-xs text-gray-500 mt-0.5">你可以直接縮放瀏覽器視窗寬度，或用手機掃描 QR Code 驗證以下介面轉換行為</p>
+</div>
+<button class="px-3.5 py-2 rounded-xl bg-bean-creamGreen hover:bg-bean-mint/40 text-bean-forestDark text-xs font-bold flex items-center gap-1.5 transition" onclick="openPwaQrModal()">
+<i class="fa-solid fa-qrcode"></i>
+<span>顯示手機開啟 QR Code</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse text-xs sm:text-sm">
+<thead>
+<tr class="bg-bean-softGreen text-bean-forestDark border-b border-bean-mint/30">
+<th class="py-3 px-4 font-bold rounded-tl-xl">設計項目</th>
+<th class="py-3 px-4 font-bold"><i class="fa-solid fa-mobile-screen mr-1.5"></i>手機版 (`&lt;=
+                        1024px`)</th>
+<th class="py-3 px-4 font-bold rounded-tr-xl"><i class="fa-solid fa-desktop mr-1.5"></i>電腦網頁版 (`&gt;
+                      1024px`)</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100">
+<tr class="hover:bg-bean-creamWhite/60">
+<td class="py-3 px-4 font-semibold text-bean-ink">頁面配置</td>
+<td class="py-3 px-4 text-gray-600">單欄式（直式聊天介面、底部固定輸入框）</td>
+<td class="py-3 px-4 text-gray-600">雙欄或三欄（左選單、中對話、右來源）</td>
+</tr>
+<tr class="hover:bg-bean-creamWhite/60">
+<td class="py-3 px-4 font-semibold text-bean-ink">功能選單</td>
+<td class="py-3 px-4 text-gray-600">頂部漢堡選單（點擊滑出可收合抽屜）</td>
+<td class="py-3 px-4 text-gray-600">左側固定導覽列（常駐顯示）</td>
+</tr>
+<tr class="hover:bg-bean-creamWhite/60">
+<td class="py-3 px-4 font-semibold text-bean-ink">AI 問答</td>
+<td class="py-3 px-4 text-gray-600">全螢幕聊天區</td>
+<td class="py-3 px-4 text-gray-600">中央主要聊天面板</td>
+</tr>
+<tr class="hover:bg-bean-creamWhite/60">
+<td class="py-3 px-4 font-semibold text-bean-ink">文件來源</td>
+<td class="py-3 px-4 text-gray-600">點擊來源標籤由底部展開抽屜 (Bottom Sheet)</td>
+<td class="py-3 px-4 text-gray-600">右側常駐顯示「檢索文件參考來源」側欄</td>
+</tr>
+<tr class="hover:bg-bean-creamWhite/60">
+<td class="py-3 px-4 font-semibold text-bean-ink">校園地圖</td>
+<td class="py-3 px-4 text-gray-600">手機全螢幕地圖＋底部資訊卡</td>
+<td class="py-3 px-4 text-gray-600">左地圖與右處室建築資訊並排顯示</td>
+</tr>
+<tr class="hover:bg-bean-creamWhite/60">
+<td class="py-3 px-4 font-semibold text-bean-ink">語音輸入</td>
+<td class="py-3 px-4 text-gray-600">支援行動裝置麥克風可用時提供</td>
+<td class="py-3 px-4 text-gray-600">支援瀏覽器 Web Speech API 可用時提供</td>
+</tr>
+<tr class="hover:bg-bean-creamWhite/60">
+<td class="py-3 px-4 font-semibold text-bean-ink">使用方式</td>
+<td class="py-3 px-4 text-gray-600">掃描 QR Code 開啟並支援加入主畫面 (PWA)</td>
+<td class="py-3 px-4 text-gray-600">瀏覽器輸入網址直接開啟</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- 系統技術堆疊四欄卡 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-white p-5 rounded-2xl border border-bean-creamGreen shadow-soft">
+<div class="w-10 h-10 rounded-xl bg-bean-creamGreen text-bean-forest flex items-center justify-center text-lg mb-3">
+<i class="fa-solid fa-code"></i>
+</div>
+<h4 class="font-bold text-sm text-bean-ink">前端與 PWA</h4>
+<p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                HTML5、CSS3 (Tailwind)、JavaScript、RWD 響應式布局、Web Speech 語音辨識、PWA 離線快取與桌面安裝。
+              </p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-bean-creamGreen shadow-soft">
+<div class="w-10 h-10 rounded-xl bg-bean-creamGreen text-bean-forest flex items-center justify-center text-lg mb-3">
+<i class="fa-solid fa-server"></i>
+</div>
+<h4 class="font-bold text-sm text-bean-ink">後端 API 服務</h4>
+<p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                Python + FastAPI 高效能非同步架構，自動產生 Swagger API 文件，完全免安裝笨重的 XAMPP 環境。
+              </p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-bean-creamGreen shadow-soft">
+<div class="w-10 h-10 rounded-xl bg-bean-creamGreen text-bean-forest flex items-center justify-center text-lg mb-3">
+<i class="fa-solid fa-brain"></i>
+</div>
+<h4 class="font-bold text-sm text-bean-ink">RAG 檢索增強生成</h4>
+<p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                結合 BM25 檢索相關文件段落，再由本地 Ollama 運行開源 LLM 統整回答，不需購買 OpenAI API。
+              </p>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-bean-creamGreen shadow-soft">
+<div class="w-10 h-10 rounded-xl bg-bean-creamGreen text-bean-forest flex items-center justify-center text-lg mb-3">
+<i class="fa-solid fa-database"></i>
+</div>
+<h4 class="font-bold text-sm text-bean-ink">SQLite 輕量資料庫</h4>
+<p class="text-xs text-gray-500 mt-1 leading-relaxed">
+                SQLite 目前保存已匯入的校務文件與段落，學年度與文件有效性需由管理者核實。
+              </p>
+</div>
+</div>
+<!-- FastAPI 後端連線測試設定卡 -->
+<div class="bg-white rounded-2xl p-6 border border-bean-creamGreen shadow-soft">
+<h3 class="text-base font-bold text-bean-ink flex items-center gap-2">
+<i class="fa-solid fa-plug-circle-check text-bean-forest"></i>
+<span>FastAPI + Ollama 後端 API 端點設定（供第二階段串接使用）</span>
+</h3>
+<p class="text-xs text-gray-500 mt-1">
+              本網站使用 FastAPI + SQLite BM25 檢索；離線未連線時僅提供介面預覽，不會產生假校務答案。
+            </p>
+<div class="mt-4 flex flex-col sm:flex-row gap-3">
+<input class="flex-1 px-4 py-2.5 rounded-xl bg-bean-creamWhite border border-gray-200 text-xs sm:text-sm font-mono text-gray-700" id="fastapi-url-input" type="text" value="/api/chat"/>
+<button class="px-5 py-2.5 rounded-xl bg-bean-forest hover:bg-bean-forestDark text-white text-xs sm:text-sm font-semibold transition" onclick="toggleBackendMode()">
+                切換檢索模式（目前：<span id="arch-mode-label">後端連線狀態</span>）
+              </button>
+</div>
+</div>
+</div>
+</section>
+

@@ -1,0 +1,29 @@
+<section class="flex-1 flex overflow-hidden w-full h-full" id="tab-panel-chat">
+  <div class="ub-chat-column flex-1 flex flex-col h-full overflow-hidden">
+    <div class="ub-chat-heading hidden lg:flex items-center justify-between shrink-0">
+      <div><div class="ub-overline">UNIVERSITY HELP DESK</div><h2>智慧校務問答</h2><p>問問題、查依據，讓校務資訊更清楚。</p></div>
+      <button class="ub-source-toggle" id="desktop-source-toggle-btn" onclick="toggleDesktopRightSidebar()"><i class="fa-regular fa-file-lines"></i><span id="desktop-source-toggle-text">收合參考來源側欄</span></button>
+    </div>
+    <div id="chat-messages-container" class="ub-message-scroll flex-1 overflow-y-auto">
+      <section id="ub-intro-hero" class="ub-hero">
+        <div class="ub-hero-copy"><div class="ub-eyebrow"><span class="ub-eyebrow-dot"></span>大同大學・智慧校務助手</div><h3>校園大小事，<br><span>問 Uni-Bean 就對了。</span></h3><p>選課、請假、獎學金或畢業規定，直接提出問題。我會從已匯入資料找答案，並附上來源供你核對。</p></div>
+        <div class="ub-hero-art"><img src="./assets/mascot.png" alt="Uni-Bean 吉祥物"></div>
+      </section>
+      <div id="chat-stream" class="ub-chat-stream"></div>
+    </div>
+    <div class="ub-composer-area shrink-0">
+      <div id="voice-status-banner" class="hidden ub-voice-banner"><span id="voice-status-text">正在聆聽，請說出校務問題…</span><button type="button" onclick="stopVoiceRecognition()" aria-label="停止錄音"><i class="fa-solid fa-xmark"></i></button><button type="button" class="ub-voice-test" onclick="simulateVoiceInput()">填入測試句</button></div>
+      <form id="chat-form" class="ub-composer" onsubmit="handleChatSubmit(event)">
+        <button id="voice-input-btn" type="button" class="ub-composer-icon" title="語音輸入" aria-label="語音輸入" onclick="toggleVoiceRecognition()"><i id="voice-icon" class="fa-solid fa-microphone"></i></button>
+        <input id="chat-input" type="text" autocomplete="off" placeholder="輸入你想問的校務問題…" aria-label="輸入校務問題">
+        <button type="submit" class="ub-send-button"><span>送出</span><i class="fa-solid fa-arrow-up"></i></button>
+      </form>
+      <p class="ub-composer-note"><i class="fa-solid fa-circle-info"></i> 回答可能不完整，申請期限與規章請以學校官方公告為準。</p>
+    </div>
+  </div>
+  <aside id="desktop-source-sidebar" class="ub-sources-sidebar hidden lg:flex flex-col h-full shrink-0 transition-all duration-300">
+    <div class="ub-sources-heading"><div><div class="ub-overline">REFERENCES</div><h3>參考來源</h3><p>每一個回答，都值得查證。</p></div><span id="desktop-source-badge">0 筆來源</span></div>
+    <div class="ub-sources-context"><i class="fa-solid fa-magnifying-glass"></i> 文件檢索・BM25　<span>AI 生成視模型設定</span></div>
+    <div id="desktop-source-list" class="ub-sources-list flex-1 overflow-y-auto"></div>
+  </aside>
+</section>

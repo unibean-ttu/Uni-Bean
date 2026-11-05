@@ -1,0 +1,30 @@
+<aside id="app-sidebar" class="ub-sidebar fixed lg:static inset-y-0 left-0 z-50 w-72 lg:w-[248px] flex flex-col shrink-0 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+  <div class="ub-sidebar-head">
+    <a href="./index.html" class="ub-brand" aria-label="Uni-Bean 首頁">
+      <span class="ub-brand-avatar"><img src="./assets/mascot.png" alt="Uni-Bean 吉祥物"></span>
+      <span><strong>Uni-Bean</strong><small>豆有所應・校務助手</small></span>
+    </a>
+    <button type="button" aria-label="關閉選單" class="ub-sidebar-close lg:hidden" onclick="toggleMobileSidebar(false)"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="ub-sidebar-scroll">
+    <div class="ub-sidebar-label">探索服務</div>
+    <nav class="ub-primary-nav" aria-label="主要功能選單">
+      <button id="nav-btn-chat" aria-current="page" class="nav-item" onclick="switchTab('chat')"><i class="fa-regular fa-comments"></i><span>智慧校務問答</span></button>
+      <button id="nav-btn-directory" class="nav-item" onclick="switchTab('directory')"><i class="fa-regular fa-building"></i><span>行政資訊查詢</span></button>
+      <button id="nav-btn-map" class="nav-item" onclick="switchTab('map')"><i class="fa-solid fa-location-dot"></i><span>校園地圖與導航</span></button>
+      <button id="nav-btn-architecture" class="nav-item" onclick="switchTab('architecture')"><i class="fa-solid fa-diagram-project"></i><span>關於系統</span></button>
+    </nav>
+    <div class="ub-sidebar-rule"></div>
+    <div class="ub-sidebar-label">常用入口</div>
+    <div class="ub-sidebar-links">
+      <button onclick="triggerQuickQuestion('學分抵免申請時間與需要準備哪些文件？')"><i class="fa-regular fa-file-lines"></i>學分抵免</button>
+      <button onclick="triggerQuickQuestion('學生請假規定與申請流程是什麼？')"><i class="fa-regular fa-calendar-check"></i>請假與申請</button>
+      <a class="ub-admin-link" href="./login.html"><i class="fa-solid fa-lock"></i>管理後台登入</a>
+    </div>
+  </div>
+  <div class="ub-sidebar-foot">
+    <div class="ub-connection"><span id="engine-status-dot" class="ub-status-dot"></span><span>校務知識庫</span><button id="backend-mode-btn" onclick="toggleBackendMode()">檢查連線</button></div>
+    <p>依據已匯入的文件回答，重要資訊請核對原始來源。</p>
+    <button class="ub-device-link" onclick="openPwaQrModal()"><i class="fa-solid fa-mobile-screen-button"></i>手機預覽與安裝</button>
+  </div>
+</aside>

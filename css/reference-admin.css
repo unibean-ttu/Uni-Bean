@@ -1,0 +1,20 @@
+/* Shared visual identity for authenticated workspaces. No layout/JS dependencies. */
+:root{--ink:#203640;--sub:#607780;--primary:#23766f;--primary-dark:#155d59;--bg:#f7faf9;--edge:#dce8e5}
+body{font-size:16px;line-height:1.7;color:var(--ink);background:var(--bg)}
+.rail{background:linear-gradient(#fff 60%,#edf6f3);border-right-color:var(--edge)}
+.rail .brand,.top h1{color:var(--ink)}
+.rail nav .admin-tab.active,.rail nav .admin-tab:hover{background:#e7f2ef;color:var(--primary-dark)}
+.rail nav .admin-tab.active{border-left-color:var(--primary)}
+.panel{border-color:var(--edge);box-shadow:0 12px 32px #1b59500c}
+.panel h2::before{background:#8bbfaf}
+.stat{background:#f5faf8}
+.stat strong{color:var(--primary-dark)}
+.btn{background:var(--primary-dark)}.btn:hover{background:var(--primary)}
+.btn.ghost{background:#f0f6f4;color:var(--ink)}
+.nav-front{border-color:var(--edge)!important}
+.login{background:linear-gradient(135deg,#edf7f3,#fbfaf6)}
+.login-box{border-color:var(--edge);box-shadow:0 16px 45px #224a4320}
+@media(max-width:860px){.rail nav{flex-wrap:nowrap;overflow-x:auto}.page{padding:20px 16px 70px}}
+/* Legacy v9.2 page spacing migrated out of inline HTML. */
+.admin-rail-note{font-size:12px;margin-top:28px}.admin-mt-28{margin-top:28px}
+.admin-file-warning{position:fixed;inset:15px auto auto 15px;max-width:650px;background:#fff7e7;color:#693a1a;padding:18px 24px;z-index:999999;border:2px solid #c98f48;border-radius:13px;font-size:17px;line-height:1.75;box-shadow:0 10px 30px #0002}

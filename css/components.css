@@ -1,0 +1,11 @@
+/* Responsive & usability refinements, authored outside template HTML */
+#app-sidebar{height:100%;overscroll-behavior:contain}#chat-messages-container{overscroll-behavior:contain}
+.chat-copy{white-space:pre-wrap;overflow-wrap:anywhere}.preview-note{background:#FFF9EE;border:1px solid #D8C9B7;color:#665242;border-radius:14px;padding:10px 13px;font-size:12px;line-height:1.7}
+.source-link{color:#B54E23;text-decoration:underline;text-underline-offset:3px}.source-link:hover{color:#913B1B}
+.brand-logo{max-width:100%;object-fit:contain}.msg-avatar{background:#F7F3F2;padding:3px;border-radius:12px}.msg-avatar img{height:34px;width:34px;object-fit:contain}
+#mobile-header-mount{z-index:30;flex-shrink:0}#mobile-header-mount:empty{display:none}
+#app-sidebar img,#mobile-header-mount img{background:transparent!important}
+#chat-input{min-width:0}button,a,input{touch-action:manipulation}
+@media(max-width:1023px){#app-sidebar{top:0;height:100dvh}#mobile-source-sheet{max-height:80dvh}#chat-messages-container{padding-bottom:15px}#map-detail-panel{max-height:40dvh}#main-workspace{min-width:0}}
+@media(max-width:640px){#chat-form{gap:8px}#chat-input{font-size:16px}#mobile-source-badge-btn{padding:7px 9px}#mobile-source-badge-btn>span:nth-child(2){display:none}#mobile-header-mount header{padding-left:10px;padding-right:10px}#mobile-header-mount h1{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition-duration:0s!important;scroll-behavior:auto!important}}

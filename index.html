@@ -1,97 +1,65 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uni-Bean 豆有所應｜官方入口</title>
 
-  <style>
-    * { box-sizing: border-box; }
-    [hidden] { display: none !important; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      font-family: "Microsoft JhengHei", system-ui, sans-serif;
-      color: #263445;
-      background: #f5f7fa;
-    }
-
-    main {
-      width: min(100%, 520px);
-      padding: 42px 30px;
-      border: 1px solid #e2e7ee;
-      border-radius: 20px;
-      background: white;
-      text-align: center;
-    }
-
-    .label {
-      color: #967458;
-      font-size: 11px;
-      letter-spacing: 3px;
-    }
-
-    h1 { margin-bottom: 8px; font-size: 38px; }
-    h2 { margin-top: 0; font-size: 21px; font-weight: 500; }
-    p { color: #667085; line-height: 1.9; }
-
-    a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 13px 24px;
-      border-radius: 9px;
-      color: white;
-      background: #42668a;
-      text-decoration: none;
-    }
-
-    footer {
-      margin-top: 35px;
-      color: #667085;
-      font-size: 12px;
-      line-height: 1.8;
-    }
-  </style>
-</head>
-
-<body>
-  <main>
-    <div class="label">CAMPUS INFORMATION</div>
-
-    <h1>Uni-Bean</h1>
-    <h2>豆有所應</h2>
-
-    <p>你有需要，豆有回應！</p>
-
-    <p id="notice">
-      系統建置中。<br>
-      正式開放後，可由此頁進入。
-    </p>
-
-    <a id="enter" hidden>進入 Uni-Bean →</a>
-
-    <footer>
-      大同大學資訊經營學系<br>
-      畢業專題
-    </footer>
-  </main>
-
-  <script>
-    // 系統正式上線後，在引號內填入公開網址。
-    const systemUrl = "";
-
-    if (systemUrl) {
-      const entrance = document.getElementById("enter");
-      entrance.href = systemUrl;
-      entrance.hidden = false;
-
-      document.getElementById("notice").textContent =
-        "歡迎使用校園資訊查詢服務。";
-    }
-  </script>
-</body>
-</html>
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#f9faf9" name="theme-color"/><meta content="Uni-Bean 豆有所應｜大同大學智慧校務問答與資訊導覽" name="description"/>
+<title>Uni-Bean 豆有所應｜智慧校務助理</title>
+<link href="./icon-192.png" rel="icon" type="image/png"/><link href="./manifest.webmanifest" rel="manifest"/>
+<link href="./css/clean-ui.css?v=10.1.0-102" rel="stylesheet"/><link href="./css/user-v10.css?v=10.1.0-102" rel="stylesheet"/>
+<script defer="" src="./config.js"></script><script src="./js/reference/main.js?v=12.1.1" type="module"></script>
+<link href="./css/navigation-v10.1.css?v=10.1.0-102" rel="stylesheet"/><link href="./css/v11-complete.css?v=11.0.0" rel="stylesheet"/><link rel="stylesheet" href="./css/experience-v11-1.css?v=11.1.0&amp;nav=11.1.1"/><link href="./css/student-experience-v11-2.css?v=11.2.0" rel="stylesheet"/><link href="./css/v12-integrated.css?v=12.0.0" rel="stylesheet"/><link href="./css/v12-scheme-a.css?v=12.1.0" rel="stylesheet"/></head><body class="clean-student">
+<a class="skip-link" href="#main-content">跳到主要內容</a>
+<div class="clean-app" id="clean-app">
+<aside aria-label="主要功能選單" class="clean-sidebar" id="clean-sidebar">
+<div class="sidebar-brand"><img alt="Uni-Bean 豆子造型介面圖示" class="v10-brandmark" src="./assets/logo-horizontal-original-v11-1.png"/><div class="v10-brandcopy"><strong>Uni-Bean 豆有所應</strong><span>你有需要，豆有回應！</span></div><button aria-label="收合側欄" class="sidebar-hide" id="sidebar-toggle" title="收合側欄" type="button">☰</button></div>
+<button class="start-chat" id="sidebar-new-chat" type="button"><span aria-hidden="true">＋</span><span class="nav-label">開始新對話</span></button>
+<nav aria-label="Uni-Bean 功能" class="sidebar-nav">
+<button class="side-link is-active" data-tab="chat" type="button"><span class="side-symbol"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#chat"></use></svg></span><span class="nav-label">智慧問答</span></button>
+<button class="side-link" data-tab="directory" type="button"><span class="side-symbol"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#file"></use></svg></span><span class="nav-label">行政資訊</span></button>
+<button class="side-link" data-tab="map" type="button"><span class="side-symbol"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#map"></use></svg></span><span class="nav-label">校園導航</span></button>
+<button class="side-link" data-tab="architecture" type="button"><span class="side-symbol"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#graduation"></use></svg></span><span class="nav-label">校務資訊</span></button>
+<button class="side-link" data-tab="mine" type="button"><span class="side-symbol"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#user"></use></svg></span><span class="nav-label">我的空間</span></button>
+</nav>
+<div class="sidebar-history v101-history"><div class="sidebar-section-title">對話紀錄</div><div class="sidebar-history-list" id="sidebar-history-list"><span class="muted">尚無紀錄</span></div></div>
+<div class="sidebar-bottom"><div class="v10-sidebar-note v101-sidebar-note"><b>Uni-Bean 小提醒</b><p>重要校務規定請以官方原文為準。</p></div><a class="v10-adminlink" href="./login.html">管理者登入</a></div>
+</aside>
+<div class="sidebar-overlay" hidden="" id="sidebar-overlay"></div>
+<div class="clean-workspace">
+<header class="clean-topbar">
+<div class="topbar-left"><button aria-expanded="false" aria-label="開啟功能選單" class="topbar-menu" id="sidebar-mobile-toggle" type="button">☰</button><span class="topbar-title" id="current-page-title">校務智慧服務  ›  智慧問答</span></div>
+<div class="topbar-right"><span aria-live="polite" class="connection" id="connection"><i></i><span>正在確認連線</span></span><div class="role-picker v11-role-picker"><span id="role-visual" class="v11-role-icon" aria-hidden="true">🎓</span><button id="v11-role-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" class="v11-role-trigger">🎓 在校學生 <span aria-hidden="true">⌄</span></button><div id="v11-role-menu" class="v11-role-menu" role="listbox" aria-label="選擇資訊導覽身分" hidden></div><label class="sr-only" for="role-select">資訊導覽身分</label><select aria-label="切換資訊導覽身分" id="role-select" title="切換六大身分資訊導引"><option value="student">在校學生</option><option value="freshman">新生</option><option value="parent">家長</option><option value="alumni">畢業校友</option><option value="staff">教職員工</option><option value="visitor">訪客</option></select></div><label class="sr-only" for="v11-language">回覆語言</label><select id="v11-language" class="v11-language" title="回覆語言"><option value="zh-TW">繁體中文</option><option value="en">English</option><option value="ja">日本語</option></select><button aria-label="顯示偏好與設定" class="topbar-settings icon-button" id="open-settings" title="顯示偏好與設定" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#settings"></use></svg></button></div>
+</header>
+<main class="clean-content" id="main-content">
+<section aria-labelledby="chat-heading" class="page-view is-active" id="page-chat">
+<div class="chat-stage">
+<div class="chat-maincol">
+<div class="chat-intro" id="chat-intro"><div class="v10-hero-copy"><h1>有問題？<br/>問 Uni-Bean！</h1><p>無論是課程、學籍、獎學金、畢業、行政流程或校園生活的各種問題，<br class="v10-only-wide"/>都可以直接詢問，我會依據校內規章與官方資訊，提供有依據的解答。</p></div><img alt="微笑豆子學士使用筆電的插畫" class="v10-hero-img" src="./assets/v10-hero-character.png"/></div>
+<div class="quick-prompts"><div class="section-line"><strong id="prompt-label">✧  在校學生常見提問</strong><button class="text-button" id="open-guide" type="button">更多提問</button></div><div class="prompt-list" id="prompt-buttons"></div></div><div aria-label="常用校務服務" class="service-shortcuts"><button class="service-shortcut" data-tab="directory" type="button"><span class="shortcut-icon"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#file"></use></svg></span><span><strong>行政服務</strong><small>各項申請流程、表單與服務說明</small></span><span class="shortcut-chev"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#chev"></use></svg></span></button><button class="service-shortcut" data-tab="map" type="button"><span class="shortcut-icon"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#map"></use></svg></span><span><strong>校園導航</strong><small>教學大樓、行政單位、重要設施位置</small></span><span class="shortcut-chev"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#chev"></use></svg></span></button><button class="service-shortcut" data-tab="architecture" type="button"><span class="shortcut-icon"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#megaphone"></use></svg></span><span><strong>公告與資訊</strong><small>最新公告、重要通知與校園消息</small></span><span class="shortcut-chev"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#chev"></use></svg></span></button></div>
+<section aria-labelledby="assistant-heading" class="chat-panel"><p class="ub12-student-notice"><strong>🫘 豆豆能幫你做什麼？</strong> 問交通會開導航、找處室會開行政資訊、查公告或行事曆會帶你到對應功能；規章問題才會根據校務文件回答。</p><div class="chat-panel-title"><h2 class="sr-only" id="assistant-heading">Uni-Bean 校務助理</h2><button class="secondary-btn" id="new-chat" type="button">＋ 新對話</button></div>
+<div aria-live="polite" class="chat-messages" id="chat-messages" role="log"><div class="empty-chat"><span>有問題隨時可以問 Uni-Bean。</span></div></div>
+<form class="composer" id="chat-form"><label class="sr-only" for="chat-input">輸入校務問題</label><textarea id="chat-input" maxlength="500" placeholder="請輸入校務問題，例如：獎學金如何申請？" required="" rows="1"></textarea><div class="composer-footer"><div><button aria-label="附件上傳尚未開放" class="icon-button v10-attachment" disabled="" title="個人附件上傳尚未開放；系統僅檢索已匯入的校務文件" type="button"><svg aria-hidden="true" class="ui-icon"><use href="./assets/clean-icons.svg#paperclip"></use></svg></button><button class="icon-button" id="voice-input" title="語音輸入" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#mic"></use></svg></button><span class="composer-tip">Enter 傳送 · Shift + Enter 換行</span></div><button aria-label="發送提問" class="send-btn" id="send-message" type="submit"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#send"></use></svg></button></div></form>
+</section>
+<p class="disclaimer">本系統提供校務資訊查詢，正式規定請以大同大學官方最新公告為準。</p>
+</div>
+<aside aria-labelledby="evidence-heading" class="evidence-area v10-evidence-drawer"><div class="evidence-panel panel"><div class="section-line"><h2 id="evidence-heading">資料來源</h2><span class="tag" id="rag-mode">待提問</span></div><p class="evidence-intro" id="evidence-intro">提問後會顯示找到的原始文件與連結。</p><div class="source-mini"><div class="section-line"><strong>引用文件</strong><span class="muted" id="source-count">尚未搜尋</span></div><div class="source-mini-list" id="rag-sources"><p class="muted">目前還沒有檢索結果。</p></div></div>
+<details class="technical-details"><summary>查看檢索步驟</summary><div class="pipeline" id="rag-pipeline"><div data-step="search"><span>1</span><div><strong>文件檢索</strong><small>SQLite FTS5 + BM25</small></div><b>待命</b></div><div data-step="review"><span>2</span><div><strong>來源核實</strong><small>待核實與過期資料提示</small></div><b>待命</b></div><div data-step="model"><span>3</span><div><strong>Ollama + Qwen</strong><small>可選用，失敗退回檢索</small></div><b>待命</b></div><div data-step="response"><span>4</span><div><strong>回答</strong><small>引用原文</small></div><b>待命</b></div></div></details></div></aside>
+</div>
+</section>
+<section aria-labelledby="directory-heading" class="page-view" id="page-directory">
+<div class="page-head"><span class="eyebrow">情境式服務引導</span><h1 id="directory-heading">系所與行政處室</h1><p>不必知道承辦單位叫什麼，先選業務或輸入關鍵字，再前往公開官方網站核對。</p></div>
+<div class="panel directory-tools"><div class="search-field"><span aria-hidden="true">⌕</span><label class="sr-only" for="directory-search">搜尋處室</label><input id="directory-search" placeholder="搜尋：獎學金、請假、成績單、註冊…" type="search"/></div><div class="filter-row" id="directory-filters"><button class="filter active" data-filter="all">全部單位</button><button class="filter" data-filter="教務處">教務處</button><button class="filter" data-filter="學務處">學務處</button><button class="filter" data-filter="總務處">總務處</button><button class="filter" data-filter="圖書與資訊">圖書與資訊</button><button class="filter" data-filter="系所">系所</button></div></div>
+<div class="directory-grid" id="directory-results"></div><p class="tiny-note">來源資料中的樓層、分機、營業時間若未核實，暫不顯示，避免誤導。</p>
+</section>
+<section aria-labelledby="map-heading" class="page-view" id="page-map">
+<div class="page-head"><span class="eyebrow">Google Maps 路線規劃</span><h1 id="map-heading">校園地圖與導航</h1><p>輸入你現在的出發地，直接規劃前往大同大學的交通路線。</p></div>
+<div class="map-route panel"><div><h2>前往大同大學</h2><p class="muted">例如：台北車站 → 大同大學</p></div><form class="route-fields" id="route-form"><div><label for="route-origin">出發地</label><input id="route-origin" placeholder="例如：台北車站（請自行輸入出發地）" autocomplete="off" required=""/></div><div aria-hidden="true" class="route-arrow">→</div><div><label for="route-destination">目的地</label><input disabled="" id="route-destination" value="大同大學 · 臺北市中山北路三段40號"/></div><div class="route-footer"><fieldset class="travel-choice"><legend class="sr-only">交通方式</legend><label><input checked="" name="travel" type="radio" value="transit"/> 大眾運輸</label><label><input name="travel" type="radio" value="driving"/> 開車</label><label><input name="travel" type="radio" value="walking"/> 步行</label></fieldset><button class="send-btn" type="submit">開啟 Google Maps 路線 ↗</button></div></form></div>
+<div class="map-grid"><div class="panel map-frame"><div class="section-line"><h2>大同大學位置</h2><a class="text-button" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E5%90%8C%E5%A4%A7%E5%AD%B8" rel="noopener noreferrer" target="_blank">在 Google Maps 查看 ↗</a></div><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E5%A4%A7%E5%90%8C%E5%A4%A7%E5%AD%B8&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" title="大同大學在 Google Maps 上的位置"></iframe><p class="tiny-note">地圖由 Google 提供；如無法顯示，請使用上方導航按鈕。</p></div><div class="panel map-tips"><h2>在校園裡找哪裡？</h2><p>可先查詢圖書館、教務處、學務處等公開服務入口。校內個別建築座標與樓層尚待逐一核實。</p><div class="tip-actions"><button class="plain-action" data-query="大同大學圖書館的官方網址與服務資訊在哪裡？">📚 圖書館</button><button class="plain-action" data-query="大同大學教務處在哪裡查註冊相關資訊？">🏫 教務處</button><button class="plain-action" data-query="大同大學學務處的公開服務有哪些？">🧑‍🎓 學務處</button></div></div></div>
+</section>
+<section aria-labelledby="architecture-heading" class="page-view" id="page-architecture"><div class="page-head"><span class="eyebrow">依據已匯入的校務資訊</span><h1 id="architecture-heading">校務資訊與公告</h1><p>公告依目前資料庫提供；資料尚未核實時，請以各處室官方網站為準。</p></div><div aria-label="校務資訊分類" class="v101-campus-tabs" role="tablist"><button aria-selected="true" class="v101-campus-tab is-active" data-campus-tab="announcements" id="campus-tab-announcements" role="tab" type="button">最新公告</button><button aria-selected="false" class="v101-campus-tab" data-campus-tab="calendar" id="campus-tab-calendar" role="tab" type="button">已核實行事曆</button><button aria-selected="false" class="v101-campus-tab" data-campus-tab="offices" id="campus-tab-offices" role="tab" type="button">官方服務入口</button></div><div class="v101-campus-panels"><div class="panel v10-announcements-panel" data-campus-panel="announcements" id="campus-panel-announcements" role="tabpanel"><div class="section-line"><h2>最新公告</h2><button class="text-button" id="refresh-campus-announcements" type="button">重新整理 ↻</button></div><div class="v10-announcement-list" id="v10-announcement-list"><p class="muted">正在向後端讀取公告…</p></div></div><section class="panel v101-campus-panel" data-campus-panel="calendar" hidden="" id="campus-panel-calendar" role="tabpanel"><div class="section-line"><h2>已核實校務行事曆</h2><button class="text-button" id="refresh-campus-calendar" type="button">重新整理 ↻</button></div><p class="muted">只會顯示附官方來源、且經人工核實的校務日期；不會自行推測截止期限。</p><div class="v101-calendar-list" id="v101-calendar-list">正在讀取已核實日程…</div></section><section class="panel v101-campus-panel" data-campus-panel="offices" hidden="" id="campus-panel-offices" role="tabpanel"><h2>官方服務入口</h2><p>查詢辦理窗口、公告及相關規章；不在此頁顯示尚未核實的學年度期限。</p><div class="v101-quick-services"><button class="v101-service-link" data-tab="directory" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#file"></use></svg><span><strong>查詢行政處室</strong><small>找承辦單位及官方網站</small></span></button><button class="v101-service-link" data-tab="chat" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#chat"></use></svg><span><strong>校務智慧問答</strong><small>以白話了解正式文件</small></span></button><button class="v101-service-link" data-tab="map" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#map"></use></svg><span><strong>前往大同大學</strong><small>由出發地規劃路線</small></span></button></div></section></div><div class="architecture-grid"><article class="panel"><h2>行政處室與辦理流程</h2><p>不知道要找哪個處室？可使用「行政資訊」搜尋相關單位及官方連結。</p><button class="secondary-btn" data-tab="directory" type="button">查看行政資訊</button></article><article class="panel"><h2>查詢校務規章</h2><p>Uni-Bean 會先檢索已建立索引的文件，資料不足時提示你參考官方原文。</p><button class="secondary-btn" data-tab="chat" type="button">開始提問</button></article></div><details class="panel v10-system-details"><summary>了解 Uni-Bean 系統架構（專題展示）</summary><p>前端：HTML、CSS、JavaScript、RWD／PWA；後端：Python FastAPI；檢索：SQLite FTS5／BM25；可選 Ollama＋Qwen，搭配獨立 Python 智慧爬蟲。</p></details></section>
+<section aria-labelledby="mine-heading" class="page-view" id="page-mine"><div class="page-head"><span class="eyebrow">僅限本裝置的個人空間</span><h1 id="mine-heading">我的空間</h1><p>查詢紀錄與收藏儲存在目前瀏覽器，不需要學生帳號，也不會跨裝置同步。</p></div><div class="mine-grid"><div class="panel"><div class="section-line"><h2>最近提問</h2><div><button class="text-button" id="export-history">匯出 TXT</button><button class="text-button danger-link" id="clear-history">清除</button></div></div><div class="record-list" id="history-list"></div></div><div class="panel"><h2>我的收藏</h2><div class="record-list" id="favorite-list"></div></div></div><section class="panel v101-mine-services"><h2>我的常用服務</h2><p class="muted">常用服務隨時從這裡開啟；不需要註冊或登入學生帳號。</p><div class="v101-quick-services"><button class="v101-service-link" data-tab="chat" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#chat"></use></svg><span>校務問答</span></button><button class="v101-service-link" data-tab="architecture" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#calendar"></use></svg><span>最新公告與行事曆</span></button><button class="v101-service-link" data-tab="directory" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#file"></use></svg><span>行政處室</span></button><button class="v101-service-link" data-tab="map" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#map"></use></svg><span>校園導航</span></button></div></section><div class="panel privacy-panel"><h2>身分設定與隱私</h2><p>目前導覽身分：<strong id="mine-role">在校學生</strong>。如需切換，使用頁面右上角的身分下拉選單即可。這不是學生登入，也不會連接校務帳號。請勿在對話中輸入學號、密碼或身分證字號。</p><button class="secondary-btn" id="mine-open-settings" type="button">調整文字大小與偏好</button></div></section>
+</main>
+<nav aria-label="手機主要功能" class="bottom-nav"><button class="is-active" data-tab="chat" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#chat"></use></svg><span>問答</span></button><button data-tab="architecture" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#calendar"></use></svg><span>校務</span></button><button data-tab="map" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#map"></use></svg><span>導航</span></button><button id="open-more" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#menu"></use></svg><span>更多</span></button></nav></div></div>
+<dialog aria-labelledby="guide-title" class="ub-dialog" id="guide-dialog"><div class="dialog-head compact"><button aria-label="關閉" class="icon-button close-dialog" id="close-guide" type="button">×</button><h2 id="guide-title">你現在想處理什麼事？</h2><p>選擇主題，我們會把問題帶入校務問答。</p></div><div class="guide-grid" id="guide-grid"></div></dialog>
+<dialog class="ub-dialog v11-source-dialog" id="v11-detail-dialog" aria-labelledby="v11-detail-title"><div class="v11-dialog-head"><h2 id="v11-detail-title">資訊詳情與相關規章</h2><button type="button" id="v11-close-detail" class="icon-button" aria-label="關閉資訊詳情">×</button></div><div id="v11-detail-body" class="v11-detail-body"></div></dialog>
+<dialog id="report-feedback-dialog" class="ub-dialog ub-report-dialog" aria-labelledby="report-feedback-title"><form id="report-feedback-form" method="dialog"><div class="ub-report-head"><h2 id="report-feedback-title">回報回答問題</h2><button type="button" id="report-feedback-close" aria-label="關閉回報表單">×</button></div><p class="muted">幫我們改善校務問答品質；只有你同意才會附上本次問題和引用來源。</p><label for="report-feedback-reason">問題類型</label><select id="report-feedback-reason" required><option value="outdated">資訊過期</option><option value="incorrect">內容或日期不正確</option><option value="missing_source">缺少原始來源</option><option value="unclear">說明不容易理解</option><option value="other">其他</option></select><label for="report-feedback-comment">希望改善的地方（選填）</label><textarea id="report-feedback-comment" rows="4" maxlength="300" placeholder="例如：附件連結無法開啟、找不到申請表…"></textarea><label class="ub-report-consent"><input type="checkbox" id="report-feedback-share"/> 我同意附上這次的問題、回答摘要與來源網址供管理員查核</label><p class="muted">不會附上身分證、學號或完整聊天紀錄，請不要輸入私人資訊。</p><div class="ub-report-actions"><button type="button" id="report-feedback-cancel">取消</button><button type="submit" class="ub-primary">送出回饋</button></div></form></dialog><div aria-live="polite" class="toast" hidden="" id="toast" role="status"></div>
+<dialog aria-labelledby="settings-title" class="ub-dialog v101-sheet" id="settings-dialog"><div class="v101-dialog-inner"><div class="v101-dialog-head"><h2 id="settings-title">設定與閱讀偏好</h2><button aria-label="關閉設定" class="icon-button" id="close-settings" type="button">×</button></div><div class="v101-preference-row"><label for="font-size-select">文字大小</label><select id="font-size-select"><option value="normal">標準</option><option value="large">較大</option><option value="xl">最大</option></select></div><div class="v101-preference-row"><label for="speech-rate-select">回答朗讀速度</label><select id="speech-rate-select"><option value="0.85">慢速</option><option value="1">一般</option><option value="1.15">快速</option></select></div><p class="muted">朗讀只會在你點選回答下方的「朗讀」後開始；語音支援依瀏覽器而異。</p><a class="v101-subtle-admin" href="./login.html">管理員／開發者登入 ↗</a></div></dialog><dialog aria-labelledby="more-title" class="ub-dialog v101-sheet v101-more-sheet" id="more-dialog"><div class="v101-dialog-inner"><div class="v101-dialog-head"><h2 id="more-title">更多功能</h2><button aria-label="關閉更多選單" class="icon-button" id="close-more" type="button">×</button></div><button class="v101-more-item" data-tab="directory" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#file"></use></svg><span>行政資訊</span></button><button class="v101-more-item" data-tab="mine" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#user"></use></svg><span>我的空間（紀錄／收藏）</span></button><button class="v101-more-item" data-tab="architecture" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#calendar"></use></svg><span>最新公告與行事曆</span></button><button class="v101-more-item" id="more-open-settings" type="button"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#settings"></use></svg>顯示設定</button><a class="v101-more-item" href="./login.html"><svg aria-hidden="true" class="ui-icon" focusable="false"><use href="./assets/clean-icons.svg#logout"></use></svg><span>管理者登入</span></a></div></dialog><script src="./js/reference/experience-v10.1.js?v=10.1.0-102" type="module"></script><script type="module" src="./js/reference/experience-v11.js?v=11.2.0"></script><script type="module" src="./js/reference/locale-v11-1.js?v=11.2.0"></script><script type="module" src="./js/reference/calendar-v11-1.js?v=11.2.0"></script><script type="module" src="./js/reference/feedback-v11-1.js?v=11.2.0"></script></body></html>

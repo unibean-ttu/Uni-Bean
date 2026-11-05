@@ -1,0 +1,49 @@
+/* Uni-Bean v9.1 — accessibility / onboarding / compact citations */
+:root { --font-regular: 17px; }
+html, body {font-size:var(--font-regular)}
+.side{transition:width .18s ease}
+.sidebar-collapse{margin:0 8px 14px;display:flex;align-items:center;gap:10px;border:1px solid #d9e8e3;border-radius:12px;padding:9px 13px;background:#f8fbf9;color:#186c60;font-size:14px;font-weight:750;min-height:43px;cursor:pointer}
+.sidebar-collapse .icon{height:17px;width:17px;transform:rotate(90deg)}
+body.sidebar-collapsed .app-shell{grid-template-columns:77px minmax(0,1fr)!important}
+body.sidebar-collapsed .side{padding:25px 10px;align-items:center}
+body.sidebar-collapsed .brand{margin:0 0 20px}
+body.sidebar-collapsed .brand img{width:54px;height:56px;object-fit:contain;object-position:center}
+body.sidebar-collapsed .brand span,body.sidebar-collapsed .side-bottom,body.sidebar-collapsed .nav-caption,body.sidebar-collapsed .new-chat,body.sidebar-collapsed .side-nav button{font-size:0}
+body.sidebar-collapsed .side-nav{width:100%;display:flex;flex-direction:column;align-items:center}
+body.sidebar-collapsed .side-nav button{padding:13px;display:grid;place-items:center;width:53px;min-width:0}
+body.sidebar-collapsed .side-nav button .icon{width:23px;height:23px}
+body.sidebar-collapsed .sidebar-collapse{margin:0 0 20px;padding:10px;justify-content:center;width:52px}
+body.sidebar-collapsed .sidebar-collapse .icon{transform:rotate(-90deg)}
+body.sidebar-collapsed .sidebar-collapse span{display:none}
+body.sidebar-collapsed .side-bottom{display:none}
+.side-caption{display:none!important}
+.hero-hint{transform:none!important;font-style:normal!important;letter-spacing:0!important}
+.hero-text {background:linear-gradient(114deg,#edf7f4 0%,#f5faf7 100%)}
+.intro-description{font-size:16px;color:#405d58;line-height:1.8;margin:8px 0 14px}
+.intro-description p{margin-bottom:15px}
+.intro-service-list{display:grid;gap:8px}
+.intro-service-list>div{border:1px solid #e0eee9;border-radius:11px;background:#f7fbf9;padding:11px 15px;font-size:16px}
+.intro-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.intro-actions button{min-height:46px;padding:11px 16px;border-radius:12px;cursor:pointer;font-weight:750;font-size:15px}
+.intro-primary{background:#08786b;color:#fff;border:1px solid #08786b}
+.intro-secondary{background:#fff;color:#166b61;border:1px solid #b9d7cd}
+/* Show six identity choices on one screen where viewport permits */
+.modal:not(.compact){max-height:min(94dvh,850px)!important;overflow:auto!important;padding:24px 29px!important}
+.modal:not(.compact) .role-card{min-height:124px;padding:10px!important}
+.modal:not(.compact) .role-emoji{height:49px;width:49px;font-size:25px}
+.modal:not(.compact) .modal-title::before{height:46px!important;width:46px!important;margin-bottom:3px!important}
+.modal:not(.compact) .modal-title h2{font-size:25px}
+.modal:not(.compact) .role-grid{gap:9px;margin-top:9px}
+.modal:not(.compact) .modal-foot{margin:10px 0 0}
+.citation-details{margin-top:14px;padding:12px 14px;border:1px solid #dceae5;border-radius:12px;background:#f8fbfa}
+.citation-details summary{font-size:14px;font-weight:760;color:#12685c;cursor:pointer;list-style:revert}
+.citation-list{margin-top:12px;display:grid;gap:8px}
+.citation-entry{border-top:1px solid #e0eeea;padding:8px 0;display:flex;gap:8px;flex-direction:column;font-size:14px}
+.citation-entry small{font-size:12px}
+.office-footer{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.office-footer .small-link{font-size:14px}
+.personal-actions{display:flex;flex-wrap:wrap;gap:9px;margin:15px 0 23px}
+.personal-actions button{min-height:43px;padding:9px 15px;background:white;border:1px solid #cfe3dc;border-radius:11px;color:#17695e;font-size:15px;font-weight:750;cursor:pointer}
+@media(max-width:740px){html,body{font-size:16px}.sidebar-collapse{display:none}.intro-actions{display:grid;grid-template-columns:1fr 1fr}.intro-primary{grid-column:1/-1}.modal:not(.compact){padding:14px!important;max-height:97dvh!important}.modal:not(.compact) .modal-title::before{display:none!important}.modal:not(.compact) .modal-title h2{font-size:21px}.modal:not(.compact) .modal-title p{font-size:13px}.modal:not(.compact) .role-card{min-height:106px;padding:8px 4px!important}.modal:not(.compact) .role-emoji{height:38px;width:38px;font-size:20px}.modal:not(.compact) .role-card strong{font-size:15px}.modal:not(.compact) .role-card small{font-size:11px}.role-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.modal:not(.compact) .modal-foot{font-size:11px}.intro-description{font-size:14px}}
+@media(min-width:741px){.modal:not(.compact) .role-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-height:640px){.modal:not(.compact) .role-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.modal:not(.compact) .role-card{min-height:85px}.modal:not(.compact) .modal-foot{display:none}}

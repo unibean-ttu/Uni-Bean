@@ -1,0 +1,4 @@
+@import url('./dashboard-v10.css');
+/* Staff-specific disclosure, keeping admin forms on the authenticated tabs. */
+body.staff-dashboard .admin-dash-grid .panel{padding-bottom:19px}
+body.staff-dashboard .clean-quick-panel{border-radius:17px}

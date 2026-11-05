@@ -1,0 +1,37 @@
+/* v9 working admin pages: clear sections, accessible type, intact authenticated endpoints. */
+:root{--ink:#1d353a;--sub:#657984;--primary:#147b73;--primary-dark:#0d5f59;--bg:#f6faf9;--edge:#dfe9e7}
+body{font-size:16px;background:var(--bg);line-height:1.7}
+.layout{grid-template-columns:263px minmax(0,1fr)}
+.rail{background:linear-gradient(180deg,#fff 54%,#f1f8f6);border-right:1px solid #dfece7;padding:32px 19px}
+.rail .brand{font-size:24px;gap:11px;line-height:1.2;color:#173d3e;margin-bottom:39px}
+.rail .brand img{width:58px;height:58px}.rail .brand small{display:block;font-size:12px;letter-spacing:.04em;margin-top:8px;color:#688c86;font-weight:600}
+.rail nav{display:flex;flex-direction:column;gap:6px}
+.rail nav .admin-tab,.rail nav a{border:0;text-decoration:none;display:flex;align-items:center;gap:8px;text-align:left;width:100%;padding:13px 14px;border-radius:13px;background:transparent;color:#546970;font-weight:750;font-size:16px;cursor:pointer;min-height:49px}
+.rail nav .admin-tab:hover,.rail nav .admin-tab.active{background:#e7f4f0;color:#0d6a5e}
+.rail nav .admin-tab.active{border-left:4px solid #147b73}
+.rail nav a:hover{background:#eff7f4}
+.admin-nav-separator{border-top:1px solid #e5eeea;margin:15px 0 12px}
+.rail nav a.nav-front{border:1px solid #c2ded3;background:#f0f9f5;color:#1a6056;font-size:14px;line-height:1.4;padding:12px;margin:0}
+.rail nav button.nav-switch-account{color:#a05746;border:1px solid #ebc7bc;background:#fff7f4;font-size:14px;line-height:1.5;padding:12px;margin-top:6px}
+.rail nav button.nav-switch-account:hover{background:#ffede7}
+.page{padding:40px clamp(24px,3vw,58px) 86px;background:#f7faf9}.container{max-width:1190px}
+.top h1{font-size:30px;letter-spacing:-.04em;color:#123e42}.top p{font-size:16px;color:#647e83;margin:7px 0}
+.panel{border-radius:21px;padding:clamp(18px,2.3vw,30px);box-shadow:0 10px 32px #1c3d3410;margin:19px 0;background:#fff}
+.panel h2{font-size:23px;margin-bottom:18px;color:#173f3f;letter-spacing:-.025em}
+.panel h2::before{content:"";display:inline-block;width:7px;height:21px;background:#5aaca1;border-radius:7px;margin-right:12px;vertical-align:-3px}
+.admin-overview-callout{border:1px solid #d9ece4;padding:24px 27px;border-radius:20px;margin:22px 0;background:linear-gradient(115deg,#edf9f5,#fff 70%)}
+.admin-overview-callout strong{display:block;font-size:23px;color:#15594e;margin-bottom:7px}
+.admin-overview-callout p{margin:0;color:#637c73;font-size:16px;max-width:780px}
+.stat{background:#f6fbf9;border-color:#e2eee9;border-radius:13px;padding:20px}.stat strong{font-size:30px;color:#146d65}.stat span{font-size:14px}
+input,select,textarea{font-size:16px;border-radius:11px;padding:12px 15px;min-height:48px}
+label{font-size:15px;color:#4b6266;font-weight:780}
+.item{border-radius:15px;padding:17px 20px;box-shadow:0 2px 12px #28473c09}
+.item strong{font-size:16px;color:#284448}.item small{font-size:13px}
+.btn{font-size:16px;min-height:47px;border-radius:12px;padding:12px 19px}
+.panel[hidden]{display:none!important}
+.banner{background:#fffbf2;border:1px solid #ede6d1;font-size:14px;color:#7a6751;padding:14px 17px}
+.status{font-size:15px}
+.login{background:linear-gradient(135deg,#f3f9f7,#fdfefa)}
+.login-box{max-width:490px;border-radius:24px;padding:40px}
+@media(max-width:860px){.layout{grid-template-columns:1fr}.rail{position:static;height:auto;padding:14px 18px}.rail .brand{margin-bottom:14px;font-size:18px}.rail .brand img{height:37px;width:37px}.rail nav{display:flex;flex-direction:row;overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px;gap:7px}.rail nav .admin-tab,.rail nav a{white-space:nowrap;width:auto;min-height:45px;flex:none;font-size:14px;padding:10px 13px}.rail nav .nav-switch-account{white-space:nowrap;flex:none;width:auto;min-height:45px!important;font-size:13px!important}.admin-nav-separator{border-top:0;border-left:1px solid #e5eeea;margin:3px 4px}.rail>p{display:none}.page{padding:23px 15px 75px}.top h1{font-size:25px}.panel h2{font-size:20px}.panel{padding:20px}.admin-overview-callout{padding:20px}.admin-overview-callout strong{font-size:21px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}

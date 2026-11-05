@@ -1,0 +1,57 @@
+/* Uni-Bean v11.2 — Student UX: readable evidence cards, local library, mobile.
+   This layer intentionally leaves staff / developer styling untouched. */
+.clean-student{--ub12-accent:#27694b;--ub12-border:#dce9e1;--ub12-soft:#f3faf6}
+.clean-student .chat-panel{min-width:0}
+.clean-student .chat-messages{scroll-padding-block:70px}
+.clean-student .message.assistant.ub-answer-card{border:1px solid var(--ub12-border);box-shadow:0 7px 24px #0a332514;position:relative;min-width:0;overflow-wrap:anywhere}
+.clean-student .message.assistant.ub-answer-card .message-head{border-bottom:1px solid #eef3ee;padding-bottom:10px;margin-bottom:12px}
+.clean-student .ub12-evidence-card{display:grid;gap:8px;background:var(--ub12-soft);border:1px solid #d9e8de;border-radius:16px;margin-top:15px;padding:14px 16px;font-size:.93rem}
+.clean-student .ub12-evidence-card>strong{color:#22513b;font-size:1rem}
+.clean-student .ub12-evidence-verified,.clean-student .ub12-evidence-pending{display:inline-flex;justify-self:start;max-width:100%;border-radius:999px;padding:4px 11px;font-size:.78rem;background:#e2f3e7;color:#266146}
+.clean-student .ub12-evidence-pending{background:#fff1df;color:#7b501b}
+.clean-student .ub12-evidence-row{display:grid;gap:3px;border-top:1px solid #d9e8de;padding-top:9px;min-width:0}
+.clean-student .ub12-evidence-row b{font-weight:600;font-size:.91rem;line-height:1.5}
+.clean-student .ub12-evidence-row small{color:#567060;line-height:1.5;overflow-wrap:anywhere}
+.clean-student .v11-answer-points{border-left:3px solid #75af8a;margin:12px 0;padding:5px 0 5px 22px;line-height:1.7}
+.clean-student .message.assistant .message-text{white-space:pre-wrap;line-height:1.85}
+.clean-student .message.assistant .answer-footer{border-top:1px solid #edf2ee;padding-top:12px;margin-top:16px}
+.clean-student .message.assistant .answer-footer button{min-height:44px;touch-action:manipulation}
+.clean-student .ub12-wait-message{display:flex;gap:10px;align-items:center;color:#476752;background:#f2f8f3;border-radius:14px;padding:13px 17px;font-size:.93rem}
+.clean-student .ub12-pulse{width:10px;height:10px;flex:0 0 10px;background:#438964;border-radius:50%;animation:ub12-pulse 1.35s ease-in-out infinite}
+@keyframes ub12-pulse{50%{opacity:.28;transform:scale(.7)}}
+@media(prefers-reduced-motion:reduce){.clean-student .ub12-pulse{animation:none}}
+.clean-student .message.assistant.ub12-error{background:#fffaf5;border:1px solid #eacdb7;color:#653f22}
+.clean-student .ub12-error p{line-height:1.65}
+.clean-student .ub12-error small{display:block;margin:8px 0 12px;color:#876a52;word-break:break-word}
+.clean-student .ub12-highlight{outline:3px solid #80c79f;outline-offset:3px;transition:outline-color 1.5s ease}
+.clean-student .ub12-library-tools{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:10px 0 18px}
+.clean-student .ub12-library-tools input,.clean-student .ub12-rename-form input,.clean-student .ub12-calendar-search{border:1px solid #c8dccf;border-radius:12px;min-height:43px;background:#fff;color:#1f4630;padding:9px 13px;font:inherit;max-width:100%}
+.clean-student .ub12-library-tools input{flex:1 1 220px;min-width:0}
+.clean-student .ub12-library-tools .secondary-btn,.clean-student .ub12-record-actions .secondary-btn{padding:8px 13px;min-height:42px;border-radius:12px}
+.clean-student .ub12-record{min-width:0;display:grid;gap:7px;border:1px solid #e1eae3;border-radius:15px;background:white;padding:14px;margin-bottom:12px;overflow-wrap:anywhere}
+.clean-student .ub12-record strong{line-height:1.5}
+.clean-student .ub12-record small{color:#647767;font-size:.8rem}
+.clean-student .ub12-record-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:4px}
+.clean-student .ub12-record-actions .ub12-danger{color:#9c3c3c;border-color:#edcbcb;background:#fffafa}
+.clean-student .ub12-rename-form{display:flex;flex-wrap:wrap;gap:8px}
+.clean-student .ub12-rename-form input{flex:1 1 100%;width:100%;min-width:0}
+.clean-student .ub12-calendar-search{display:block;width:100%;margin:12px 0 16px}
+.clean-student #ub12-calendar-empty{padding:12px 0}
+.clean-student .ub12-student-notice{border:1px solid #dfebe2;border-radius:14px;background:#f7fbf8;padding:10px 14px;margin-bottom:14px;color:#3b6650;font-size:.9rem;line-height:1.65}
+.clean-student .ub12-student-notice strong{color:#20563b}
+.clean-student .composer textarea{max-height:32dvh;min-height:55px;resize:vertical}
+.clean-student :is(button,input,textarea,select,a):focus-visible{outline:3px solid #65a67f;outline-offset:2px}
+@media(max-width:760px){
+ .clean-student .chat-stage{min-width:0;overflow-x:clip}
+ .clean-student .message.assistant.ub-answer-card{padding:14px!important;border-radius:17px;max-width:100%}
+ .clean-student .ub12-evidence-card{padding:12px}
+ .clean-student .message.assistant .answer-footer button{flex:1 1 115px}
+ .clean-student .ub12-library-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .clean-student .ub12-library-tools input{grid-column:1/-1;width:100%}
+ .clean-student .ub12-library-tools button{width:100%}
+ .clean-student .ub12-record-actions .secondary-btn{flex:1 1 105px}
+ .clean-student .composer{padding-bottom:env(safe-area-inset-bottom,0px)}
+ .clean-student .bottom-nav{padding-bottom:env(safe-area-inset-bottom,0px)}
+ .clean-student #page-chat{scroll-margin-bottom:80px}
+ .clean-student .ub12-calendar-search{font-size:16px}
+}

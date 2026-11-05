@@ -1,0 +1,49 @@
+<section class="hidden flex-1 flex-col h-full overflow-y-auto bg-bean-creamWhite p-4 sm:p-6 lg:p-8" id="tab-panel-directory">
+<div class="max-w-6xl mx-auto w-full space-y-6">
+<!-- 頂部搜尋與標題區 -->
+<div class="bg-white rounded-2xl p-5 sm:p-6 border border-bean-creamGreen shadow-soft">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-xs font-bold text-bean-forest bg-bean-creamGreen px-2.5 py-1 rounded-full">
+                  跨處室業務分流導覽
+                </span>
+<h2 class="text-xl sm:text-2xl font-bold text-bean-ink mt-2">大同大學 行政處室與系辦資訊查詢</h2>
+<p class="text-xs sm:text-sm text-gray-600 mt-1">
+                  不知道該找哪個處室辦業務？輸入業務關鍵字（如：抵免、請假、獎學金、學生證、場地借用）立即找到對應辦公室與分機！
+                </p>
+</div>
+<!-- 搜尋框 -->
+<div class="w-full md:w-80 relative">
+<i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-bean-creamWhite border border-gray-200 focus:border-bean-forest focus:bg-white focus:outline-none text-sm" id="office-search-input" oninput="filterOffices()" placeholder="搜尋處室、分機或申辦業務..." type="text"/>
+</div>
+</div>
+<!-- 處室分類篩選膠囊 -->
+<div class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-gray-100" id="office-category-pills">
+<button class="office-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-bean-forest text-white transition" data-cat="all" onclick="setOfficeCategory('all')">
+                全部單位
+              </button>
+<button class="office-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-bean-softGreen text-bean-forestDark hover:bg-bean-creamGreen transition" data-cat="資訊經營學系" onclick="setOfficeCategory('資訊經營學系')">
+                資訊經營學系
+              </button>
+<button class="office-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-bean-softGreen text-bean-forestDark hover:bg-bean-creamGreen transition" data-cat="教務處" onclick="setOfficeCategory('教務處')">
+                教務處
+              </button>
+<button class="office-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-bean-softGreen text-bean-forestDark hover:bg-bean-creamGreen transition" data-cat="學務處" onclick="setOfficeCategory('學務處')">
+                學務處
+              </button>
+<button class="office-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-bean-softGreen text-bean-forestDark hover:bg-bean-creamGreen transition" data-cat="總務處" onclick="setOfficeCategory('總務處')">
+                總務處
+              </button>
+<button class="office-cat-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-bean-softGreen text-bean-forestDark hover:bg-bean-creamGreen transition" data-cat="圖書與資訊" onclick="setOfficeCategory('圖書與資訊')">
+                圖書館與電算中心
+              </button>
+</div>
+</div>
+<!-- 處室卡片網格 -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-8" id="office-cards-grid">
+<!-- 由 JS 動態渲染處室卡片 -->
+</div>
+</div>
+</section>
+

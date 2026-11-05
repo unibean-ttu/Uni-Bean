@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Uni-Bean｜後台登入</title><link href="./css/clean-admin.css?v=9.4.0" rel="stylesheet"/></head>
+<body class="login"><main class="login-box"><img alt="Uni-Bean 豆有所應 Logo" class="logo" src="./assets/logo-full.png"/><h1>Uni-Bean 安全登入</h1>
+<p class="muted">管理後台與學生端分開驗證，首次使用請先在專案 <code>.env</code> 設定管理密碼。</p>
+<form id="login-form"><div class="field"><label for="role">登入身分</label><select id="role" required=""><option value="staff">校務資料管理</option><option value="dev">開發者監控</option></select></div><div class="field"><label for="password">管理密碼</label><input autocomplete="current-password" id="password" minlength="12" placeholder="輸入 .env 設定的密碼" required="" type="password"/></div><button class="btn" type="submit">登入</button></form>
+<p class="status hidden" id="message" role="alert"></p><p class="hint">安全提醒：原始上傳範例中的 <code>ttu2026</code> 是公開在前端的測試密碼，已停用。正式登入只由 FastAPI 後端驗證，無預設密碼。GitHub Pages 靜態網站不提供管理功能。</p><a href="./index.html">← 返回學生前台</a></main>
+<script src="./js/admin-ui.js?v=9.2.0" type="module"></script><script defer="" src="./js/admin-file-warning.js?v=9.3.0"></script></body></html>

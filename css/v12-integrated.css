@@ -1,0 +1,16 @@
+/* Uni-Bean 12.0: verified answer card and announcement workspace; retains clean UI. */
+.v12-answer-title{font-size:1.05rem;line-height:1.55;margin:.55rem 0 .4rem;font-weight:700;overflow-wrap:anywhere}
+.v12-answer-state{display:inline-flex;border:1px solid var(--line,#d9dedb);border-radius:999px;padding:.25rem .6rem;font-size:.78rem;font-weight:600;color:var(--muted,#555e62);margin-top:.65rem}
+.v12-points-title{display:block;font-size:.91rem;margin:.6rem 0 .3rem}
+.v12-steps{padding: .8rem 1rem .8rem 2rem; border-radius:12px;background:var(--panel,#f4f6f5);line-height:1.65;overflow-wrap:anywhere}
+.v12-steps li+li{margin-top:.4rem}
+.v12-quick-action,.v12-cancel-request{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:.4rem .78rem;border:1px solid var(--line,#d9dedb);border-radius:10px;background:transparent;color:inherit;cursor:pointer;font-size:.86rem;max-width:100%}
+.v12-quick-action:hover,.v12-cancel-request:hover{background:var(--panel,#f4f6f5)}
+.v12-cancel-request{margin-left:auto;white-space:nowrap}
+.ub12-wait-message{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem}
+.v12-announcement-tools{display:flex;flex-wrap:wrap;gap:.5rem;margin: .65rem 0}
+.v12-announcement-tools select,.v12-announcement-tools input{min-height:42px;padding:.5rem .7rem;border:1px solid var(--line,#d9dedb);border-radius:10px;background:var(--surface,#fff);color:inherit;min-width:0}
+.v12-announcement-tools input{flex:1 1 200px}
+.v12-announcement{overflow-wrap:anywhere}
+.v12-source-state{display:block;margin:.5rem 0;color:var(--muted,#5b6566)}
+@media(max-width:640px){.v12-announcement-tools select,.v12-announcement-tools input{width:100%;flex:1 1 100%}.v12-quick-action{flex:1 1 auto;min-height:44px}.v12-cancel-request{min-height:44px}.v12-answer-title{font-size:1.03rem}}

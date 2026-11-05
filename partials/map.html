@@ -1,0 +1,99 @@
+<section class="hidden flex-1 flex-col lg:flex-row h-full overflow-hidden bg-bean-creamWhite relative" id="tab-panel-map">
+<!-- 左側/主區域：互動式地圖與平面導覽切換 -->
+<div class="flex-1 flex flex-col h-full relative">
+<!-- 地圖頂部浮動工具列 -->
+<div class="p-3 sm:p-4 bg-white border-b border-bean-creamGreen flex flex-wrap items-center justify-between gap-2 z-20">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-xl bg-bean-forest text-white flex items-center justify-center">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<div>
+<h2 class="font-bold text-sm sm:text-base text-bean-ink">大同大學校園建築與處室地圖</h2>
+<p class="text-[11px] text-gray-500 hidden sm:block">展示用位置標記，正式位置、樓層請至學校官網確認</p>
+</div>
+</div>
+<!-- 地圖模式切換 (Leaflet 街景地圖 vs 校園示意配置圖) -->
+<div class="flex items-center gap-1.5 bg-bean-softGreen p-1 rounded-xl border border-bean-mint/30">
+<button class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-bean-forest text-white transition" id="map-mode-leaflet-btn" onclick="switchMapViewMode('leaflet')">
+<i class="fa-solid fa-map mr-1"></i>互動地圖（展示）
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-xs font-semibold text-bean-forestDark hover:bg-white/60 transition" id="map-mode-svg-btn" onclick="switchMapViewMode('svg')">
+<i class="fa-solid fa-compass-drafting mr-1"></i>示意配置圖
+              </button>
+</div>
+</div>
+<!-- 建築快速定位膠囊列 (手機與電腦皆可快速點選) -->
+<div class="px-3 py-2 bg-bean-softGreen border-b border-bean-creamGreen flex items-center gap-2 overflow-x-auto shrink-0 z-20" id="map-building-chips">
+<!-- 由 JS 動態產生建築按鈕 -->
+</div>
+<!-- 地圖主畫布區 -->
+<div class="flex-1 relative overflow-hidden">
+<!-- 模式 A: Leaflet OpenStreetMap -->
+<div class="w-full h-full" id="ttu-leaflet-map"></div>
+<!-- 模式 B: 示意圖（非實測比例與樓層） -->
+<div class="hidden w-full h-full bg-[#F0ECE7] flex items-center justify-center p-4 overflow-auto" id="ttu-svg-map">
+<svg class="w-full h-full max-w-4xl max-h-[480px] bg-[#FFFBF7] rounded-2xl border-2 border-bean-mint/40 shadow-inner" viewbox="0 0 800 520">
+<!-- 道路與綠地背景 -->
+<rect fill="#F5F1ED" height="520" width="800" x="0" y="0"></rect>
+<!-- 中山北路三段 (左側主幹道) -->
+<rect fill="#D1D5DB" height="520" width="55" x="20" y="0"></rect>
+<text fill="#374151" font-size="14" font-weight="bold" text-anchor="middle" transform="rotate(-90 47 260)" x="47" y="260">中山北路三段 (Zhongshan N. Rd.)</text>
+<!-- 德惠街 (上方道路) -->
+<rect fill="#D1D5DB" height="40" width="780" x="20" y="15"></rect>
+<text fill="#374151" font-size="14" font-weight="bold" text-anchor="middle" x="420" y="40">德惠街 (Dehui
+                  St.)</text>
+<!-- 中央椰林大道與草坪 -->
+<rect fill="#E4E7E2" height="60" rx="10" width="580" x="100" y="230"></rect>
+<text fill="#B54E23" font-size="13" font-weight="bold" text-anchor="middle" x="380" y="265">🌱
+                  大同大學中央步道・歐式庭園廣場</text>
+<!-- 1. 尚志教育研究館 (行政核心) -->
+<g class="cursor-pointer hover:opacity-90 transition" onclick="selectBuilding('B1')">
+<rect fill="#B54E23" height="115" rx="14" stroke="#FFE2CA" stroke-width="4" width="190" x="115" y="90"></rect>
+<text fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle" x="210" y="138">尚志教育研究館</text>
+<text fill="#FFF5EC" font-size="12" text-anchor="middle" x="210" y="162">教務處 / 學務處 / 總務處</text>
+<circle cx="140" cy="112" fill="#FFE2CA" r="12"></circle>
+<text fill="#873F25" font-size="11" font-weight="bold" text-anchor="middle" x="140" y="116">B1</text>
+</g>
+<!-- 2. 經營大樓 (資訊經營學系所在) -->
+<g class="cursor-pointer hover:opacity-90 transition" onclick="selectBuilding('B2')">
+<rect fill="#873F25" height="125" rx="14" stroke="#C87A52" stroke-width="4" width="200" x="340" y="80"></rect>
+<text fill="#FFE2CA" font-size="17" font-weight="bold" text-anchor="middle" x="440" y="130">★ 經營大樓
+                    (A4)</text>
+<text fill="#FFFFFF" font-size="13" font-weight="bold" text-anchor="middle" x="440" y="155">資訊經營學系系辦
+                    (4F)</text>
+<text fill="#FFF5EC" font-size="11" text-anchor="middle" x="440" y="176">專題研究室・電腦專業教室</text>
+</g>
+<!-- 3. 圖書館 -->
+<g class="cursor-pointer hover:opacity-90 transition" onclick="selectBuilding('B5')">
+<rect fill="#B54E23" height="115" rx="14" stroke="#FFE2CA" stroke-width="3" width="180" x="575" y="90"></rect>
+<text fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle" x="665" y="142">大同大學圖書館</text>
+<text fill="#FFF5EC" font-size="12" text-anchor="middle" x="665" y="165">自習室 / 討論室 / 論文檢索</text>
+</g>
+<!-- 4. 志生紀念館 -->
+<g class="cursor-pointer hover:opacity-90 transition" onclick="selectBuilding('B6')">
+<rect fill="#C87A52" height="130" rx="14" stroke="#B54E23" stroke-width="3" width="170" x="115" y="320"></rect>
+<text fill="#873F25" font-size="16" font-weight="bold" text-anchor="middle" x="200" y="378">志生紀念館</text>
+<text fill="#873F25" font-size="12" text-anchor="middle" x="200" y="400">藝文展覽・文化空間</text>
+</g>
+<!-- 5. 電機館 (電算中心) -->
+<g class="cursor-pointer hover:opacity-90 transition" onclick="selectBuilding('B3')">
+<rect fill="#B54E23" height="130" rx="14" stroke="#FFE2CA" stroke-width="3" width="200" x="320" y="320"></rect>
+<text fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle" x="420" y="375">電機館</text>
+<text fill="#FFF5EC" font-size="12" text-anchor="middle" x="420" y="398">電算中心 (校園網路/SSO帳號)</text>
+</g>
+<!-- 6. 挺生大樓 -->
+<g class="cursor-pointer hover:opacity-90 transition" onclick="selectBuilding('B4')">
+<rect fill="#B54E23" height="130" rx="14" stroke="#FFE2CA" stroke-width="3" width="200" x="555" y="320"></rect>
+<text fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle" x="655" y="375">挺生大樓</text>
+<text fill="#FFF5EC" font-size="12" text-anchor="middle" x="655" y="398">跨領域實作空間・育成中心</text>
+</g>
+</svg>
+</div>
+</div>
+</div>
+<!-- 右側/底部：建築與進駐處室詳細資訊面板 (Desktop 380px 並排 / Mobile 底部浮動卡) -->
+<aside class="w-full lg:w-[380px] xl:w-[410px] bg-white border-t lg:border-t-0 lg:border-l border-bean-creamGreen flex flex-col max-h-[46vh] lg:max-h-full overflow-y-auto shrink-0 z-20 shadow-lg lg:shadow-none" id="map-detail-panel">
+<!-- 由 JS 動態填入所選建築詳情 -->
+</aside>
+</section>
+

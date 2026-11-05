@@ -1,0 +1,691 @@
+[
+  {
+    "id": "OFF-01",
+    "name": "資訊經營學系 系辦公室",
+    "category": "資訊經營學系",
+    "buildingId": "B2",
+    "location": "經營大樓 4 樓 (A4-402)",
+    "ext": "(02) 2182-2928 分機 6551",
+    "hours": "週一至週五 08:30 - 17:00",
+    "tags": [
+      "畢業專題",
+      "英檢門檻登錄",
+      "學分初審",
+      "專業電腦教室借用",
+      "系學會輔導"
+    ],
+    "sampleQuestion": "資經營系的畢業門檻與英文檢定規定是什麼？",
+    "verified": false
+  },
+  {
+    "id": "OFF-02",
+    "name": "教務處 註冊組",
+    "category": "教務處",
+    "buildingId": "B1",
+    "location": "尚志教育研究館 1 樓",
+    "ext": "(02) 2182-2928 分機 6212",
+    "hours": "週一至週五 08:30 - 17:00",
+    "tags": [
+      "學分抵免",
+      "歷年成績單",
+      "休退學辦理",
+      "轉系雙主修",
+      "畢業資格審核",
+      "學生證補發"
+    ],
+    "sampleQuestion": "學分抵免申請時間與需要準備哪些文件？",
+    "verified": false,
+    "official_url": "https://reg.ttu.edu.tw/"
+  },
+  {
+    "id": "OFF-03",
+    "name": "教務處 課務組",
+    "category": "教務處",
+    "buildingId": "B1",
+    "location": "尚志教育研究館 1 樓",
+    "ext": "(02) 2182-2928 分機 6221",
+    "hours": "週一至週五 08:30 - 17:00",
+    "tags": [
+      "加退選課",
+      "寒暑修開班",
+      "跨校選課",
+      "停修申請",
+      "教室排課查詢"
+    ],
+    "sampleQuestion": "寒暑修開課人數門檻與收費標準為何？",
+    "verified": false,
+    "official_url": "https://curri.ttu.edu.tw/"
+  },
+  {
+    "id": "OFF-04",
+    "name": "學務處 生活輔導組",
+    "category": "學務處",
+    "buildingId": "B1",
+    "location": "尚志教育研究館 1 樓",
+    "ext": "(02) 2182-2928 分機 6311 / 6312",
+    "hours": "週一至週五 08:30 - 17:00",
+    "tags": [
+      "線上請假簽核",
+      "就學貸款",
+      "學雜費減免",
+      "弱勢助學金",
+      "急難救助",
+      "校內外住宿"
+    ],
+    "sampleQuestion": "學生請假超過幾節需要導師與系主任簽核？",
+    "verified": false,
+    "official_url": "https://sa.ttu.edu.tw/"
+  },
+  {
+    "id": "OFF-05",
+    "name": "學務處 課外活動指導組",
+    "category": "學務處",
+    "buildingId": "B1",
+    "location": "尚志教育研究館 1 樓",
+    "ext": "(02) 2182-2928 分機 6321",
+    "hours": "週一至週五 08:30 - 17:00",
+    "tags": [
+      "社團活動申請",
+      "校外獎助學金",
+      "學生會與系學會",
+      "海報張貼核章"
+    ],
+    "sampleQuestion": "校內獎助學金與急難救助要去哪個處室申請？",
+    "verified": false,
+    "official_url": "https://sa.ttu.edu.tw/"
+  },
+  {
+    "id": "OFF-06",
+    "name": "總務處 事務組 / 出納組",
+    "category": "總務處",
+    "buildingId": "B1",
+    "location": "尚志教育研究館 1 樓",
+    "ext": "(02) 2182-2928 分機 6411 / 6421",
+    "hours": "週一至週五 08:30 - 17:00",
+    "tags": [
+      "場地借用",
+      "汽機車停車證",
+      "學雜費與學分費繳納",
+      "校園修繕通報"
+    ],
+    "sampleQuestion": "社團或系學會要如何借用校園場地與教室？",
+    "verified": false
+  },
+  {
+    "id": "OFF-07",
+    "name": "大同大學 圖書館",
+    "category": "圖書與資訊",
+    "buildingId": "B5",
+    "location": "圖書館大樓 1F - 5F",
+    "ext": "(02) 2182-2928 分機 6711",
+    "hours": "週一至週五 08:30 - 21:30",
+    "tags": [
+      "圖書借還",
+      "討論室預約",
+      "電子資料庫",
+      "歷屆畢業專題與論文檢索"
+    ],
+    "sampleQuestion": "資經營系的畢業門檻與英文檢定規定是什麼？",
+    "verified": false
+  },
+  {
+    "id": "OFF-08",
+    "name": "電子計算機中心 (電算中心)",
+    "category": "圖書與資訊",
+    "buildingId": "B3",
+    "location": "電機館 2 樓",
+    "ext": "(02) 2182-2928 分機 6611",
+    "hours": "週一至週五 08:30 - 17:00",
+    "tags": [
+      "校園無線網路 Wi-Fi",
+      "學生信箱與 SSO 密碼重置",
+      "授權軟體下載",
+      "校務資訊系統"
+    ],
+    "sampleQuestion": "學分抵免申請時間與需要準備哪些文件？",
+    "verified": false
+  },
+  {
+    "id": "SRC-A001",
+    "name": "行政主管資訊",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "https://www.ttu.edu.tw/p/404-1000-7785.php?Lang=zh-tw",
+    "tags": [
+      "行政單位",
+      "行政主管資訊"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「行政主管資訊」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A002",
+    "name": "會議紀錄",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "https://sec.ttu.edu.tw/p/412-1011-972.php",
+    "tags": [
+      "行政單位",
+      "會議紀錄"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「會議紀錄」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A003",
+    "name": "校長室",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "https://president.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "校長室"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「校長室」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A004",
+    "name": "教務處",
+    "category": "教務處",
+    "group": "行政單位",
+    "official_url": "http://dean.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "教務處"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「教務處」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A005",
+    "name": "研究發展處",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://rd1.ttu.edu.tw/TTURD/",
+    "tags": [
+      "行政單位",
+      "研究發展處"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「研究發展處」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A006",
+    "name": "學生事務處",
+    "category": "學務處",
+    "group": "行政單位",
+    "official_url": "http://sa.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "學生事務處"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「學生事務處」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A007",
+    "name": "圖書資訊處",
+    "category": "圖書與資訊",
+    "group": "行政單位",
+    "official_url": "https://olis.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "圖書資訊處"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「圖書資訊處」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A008",
+    "name": "總務處",
+    "category": "總務處",
+    "group": "行政單位",
+    "official_url": "http://gg.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "總務處"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「總務處」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A009",
+    "name": "國際暨兩岸事務處",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "https://oia.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "國際暨兩岸事務處"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「國際暨兩岸事務處」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A010",
+    "name": "秘書室/公關中心",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://sec.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "秘書室/公關中心"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「秘書室/公關中心」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A011",
+    "name": "體育室",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://pettu.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "體育室"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「體育室」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A012",
+    "name": "人事室",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://personnel.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "人事室"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「人事室」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A013",
+    "name": "軍訓室",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://military.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "軍訓室"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「軍訓室」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A014",
+    "name": "推廣教育中心",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://ex.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "推廣教育中心"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「推廣教育中心」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A015",
+    "name": "會計室",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://account.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "會計室"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「會計室」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A016",
+    "name": "環安衛中心",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "https://ehs.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "環安衛中心"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「環安衛中心」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A017",
+    "name": "校務研究辦公室",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://ir.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "校務研究辦公室"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「校務研究辦公室」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A018",
+    "name": "性別平等教育委員會",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://gender.ttu.edu.tw/",
+    "tags": [
+      "行政單位",
+      "性別平等教育委員會"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「性別平等教育委員會」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-A019",
+    "name": "大同校友會",
+    "category": "其他行政單位",
+    "group": "行政單位",
+    "official_url": "http://www.ttualumni.org.tw/",
+    "tags": [
+      "行政單位",
+      "大同校友會"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「大同校友會」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T001",
+    "name": "教學主管資訊",
+    "category": "系所",
+    "group": "其他教學單位",
+    "official_url": "https://ttu.edu.tw/p/404-1000-7786.php?Lang=zh-tw",
+    "tags": [
+      "其他教學單位",
+      "教學主管資訊"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「教學主管資訊」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T002",
+    "name": "機械與材料工程學系(所)",
+    "category": "系所",
+    "group": "工程學院（111學年度起，電機資訊學院併入）",
+    "official_url": "https://mme.ttu.edu.tw/",
+    "tags": [
+      "工程學院（111學年度起，電機資訊學院併入）",
+      "機械與材料工程"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「機械與材料工程學系(所)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T003",
+    "name": "化學工程與生物科技學系(所)",
+    "category": "系所",
+    "group": "工程學院（111學年度起，電機資訊學院併入）",
+    "official_url": "https://cebt.ttu.edu.tw/",
+    "tags": [
+      "工程學院（111學年度起，電機資訊學院併入）",
+      "化學工程與生物科技"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「化學工程與生物科技學系(所)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T004",
+    "name": "工程學院學士班(大一不分系)",
+    "category": "系所",
+    "group": "工程學院（111學年度起，電機資訊學院併入）",
+    "official_url": "http://ecf.ttu.edu.tw/",
+    "tags": [
+      "工程學院（111學年度起，電機資訊學院併入）",
+      "工程學院學士班(大一不分系)"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「工程學院學士班(大一不分系)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T005",
+    "name": "電機工程學系(所)",
+    "category": "系所",
+    "group": "工程學院（111學年度起，電機資訊學院併入）",
+    "official_url": "https://ee.ttu.edu.tw/",
+    "tags": [
+      "工程學院（111學年度起，電機資訊學院併入）",
+      "電機工程"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「電機工程學系(所)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T006",
+    "name": "資訊工程學系(所)",
+    "category": "系所",
+    "group": "工程學院（111學年度起，電機資訊學院併入）",
+    "official_url": "https://cse.ttu.edu.tw/",
+    "tags": [
+      "工程學院（111學年度起，電機資訊學院併入）",
+      "資訊工程"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「資訊工程學系(所)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T007",
+    "name": "通訊工程研究所(併入電機工程研究所招生)",
+    "category": "系所",
+    "group": "工程學院（111學年度起，電機資訊學院併入）",
+    "official_url": "https://www.ttu.edu.tw/p/412-1000-99.php",
+    "tags": [
+      "工程學院（111學年度起，電機資訊學院併入）",
+      "通訊工程研究所(併入電機工程研究所招生)"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「通訊工程研究所(併入電機工程研究所招生)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T008",
+    "name": "經營學院",
+    "category": "系所",
+    "group": "經營學院",
+    "official_url": "http://mgtc.ttu.edu.tw/",
+    "tags": [
+      "經營學院"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「經營學院」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T009",
+    "name": "事業與資訊經營學系(所)【114學年度起招生】",
+    "category": "系所",
+    "group": "經營學院",
+    "official_url": "https://bim.ttu.edu.tw/",
+    "tags": [
+      "經營學院",
+      "事業與資訊經營【114學年度起招生】"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「事業與資訊經營學系(所)【114學年度起招生】」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T010",
+    "name": "事業經營學系(所)",
+    "category": "系所",
+    "group": "經營學院",
+    "official_url": "https://mba.ttu.edu.tw/",
+    "tags": [
+      "經營學院",
+      "事業經營"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「事業經營學系(所)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T011",
+    "name": "資訊經營學系(所)",
+    "category": "系所",
+    "group": "經營學院",
+    "official_url": "https://mis.ttu.edu.tw/",
+    "tags": [
+      "經營學院",
+      "資訊經營"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「資訊經營學系(所)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T012",
+    "name": "設計學院",
+    "category": "系所",
+    "group": "設計學院",
+    "official_url": "https://dc.ttu.edu.tw/",
+    "tags": [
+      "設計學院"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「設計學院」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T013",
+    "name": "工業設計學系(所)",
+    "category": "系所",
+    "group": "設計學院",
+    "official_url": "https://id.ttu.edu.tw/",
+    "tags": [
+      "設計學院",
+      "工業設計"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「工業設計學系(所)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T014",
+    "name": "數位媒體設計學系(所)",
+    "category": "系所",
+    "group": "設計學院",
+    "official_url": "https://dmd.ttu.edu.tw/",
+    "tags": [
+      "設計學院",
+      "數位媒體設計"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「數位媒體設計學系(所)」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T015",
+    "name": "設計科學研究所",
+    "category": "系所",
+    "group": "設計學院",
+    "official_url": "https://ds.ttu.edu.tw/",
+    "tags": [
+      "設計學院",
+      "設計科學研究所"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「設計科學研究所」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T016",
+    "name": "國際學院",
+    "category": "系所",
+    "group": "國際學院",
+    "official_url": "https://ic.ttu.edu.tw/",
+    "tags": [
+      "國際學院"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「國際學院」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T017",
+    "name": "應用外語學系",
+    "category": "系所",
+    "group": "國際學院",
+    "official_url": "http://afl.ttu.edu.tw/",
+    "tags": [
+      "國際學院",
+      "應用外語學系"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「應用外語學系」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T018",
+    "name": "通識教育中心",
+    "category": "系所",
+    "group": "國際學院",
+    "official_url": "https://gec.ttu.edu.tw/",
+    "tags": [
+      "國際學院",
+      "通識教育中心"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「通識教育中心」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T019",
+    "name": "造物教育實踐中心",
+    "category": "系所",
+    "group": "國際學院",
+    "official_url": "http://creator.ttu.edu.tw/",
+    "tags": [
+      "國際學院",
+      "造物教育實踐中心"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「造物教育實踐中心」提供哪些服務或重要資訊？"
+  },
+  {
+    "id": "SRC-T020",
+    "name": "學程教育",
+    "category": "系所",
+    "group": "國際學院",
+    "official_url": "https://dean.ttu.edu.tw/p/412-1002-90.php",
+    "tags": [
+      "國際學院",
+      "學程教育"
+    ],
+    "verified": false,
+    "review_status": "pending_url_check",
+    "sampleQuestion": "請問大同大學「學程教育」提供哪些服務或重要資訊？"
+  }
+]

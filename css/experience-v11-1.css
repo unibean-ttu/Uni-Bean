@@ -1,0 +1,88 @@
+/* Uni-Bean v11.1 — targeted accessibility and three-panel visual refinements.
+   Kept separate from HTML and application logic. */
+:root{--ub11-soft:#eaf7ee;--ub11-ink:#163e2c;--ub11-border:#dbe8df}
+/* Preserve the user's ORIGINAL full lockup (not a remade cartoon or cut-off wordmark). */
+.clean-student .sidebar-brand .v10-brandmark,.clean-admin .brand .v10-brandmark{width:min(265px,94%)!important;height:auto!important;max-height:128px!important;max-width:100%!important;object-fit:contain!important;object-position:left center!important;display:block!important}
+.clean-student .sidebar-brand{height:auto!important;min-height:112px!important;align-items:center!important;overflow:visible!important}
+.clean-admin .brand{display:flex;align-items:center;min-height:95px;overflow:visible}
+.clean-admin .brand .v10-brandcopy{display:none!important}
+.clean-student .sidebar-brand .v10-brandcopy{display:none!important}
+body.sidebar-collapsed.clean-student .sidebar-brand .v10-brandmark{width:52px!important;max-height:64px!important}
+@media(max-width:720px){.clean-student .sidebar-brand .v10-brandmark,.clean-admin .brand .v10-brandmark{width:min(195px,100%)!important;max-height:98px!important}}
+/* The bot avatar uses the actual user-supplied mascot asset. */
+.clean-student .message.assistant .message-head{display:flex;align-items:center;gap:10px;min-height:42px}
+.clean-student .ub-answer-avatar{width:38px;height:38px;min-width:38px;border-radius:12px;border:1px solid #e2ece6;background:#fff;object-fit:contain;padding:3px}
+.clean-student .message.assistant{border:1px solid #e5ede8;border-radius:18px;padding:16px 20px;background:#fff;max-width:min(790px,100%);box-shadow:0 4px 15px #17352209}
+.clean-student .message.assistant .message-text{font-size:17px;line-height:1.78}
+.clean-student .message.assistant .source-details{margin-top:14px;background:#f8fcf9;border:1px solid var(--ub11-border);border-radius:14px;padding:12px}
+.clean-student .message.assistant .source-entry{border-top:1px solid #e2ebe6;margin-top:8px;padding-top:10px;line-height:1.65}
+.clean-student .message.assistant .source-entry small{display:block;color:#60786b;margin-top:4px}
+.clean-student .message.assistant .answer-footer{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.clean-student .message.assistant .answer-footer button{border:1px solid #dceae1;background:#fff;border-radius:12px;padding:9px 11px;color:#235a43;min-height:40px}
+.clean-student .v11-detail-body .v11-brief{background:#eef8f0;padding:14px;border-radius:12px;line-height:1.8}
+/* Font size choices change all student controls, not just one message. */
+html[data-ub-font="large"] body.clean-student{font-size:19px!important}
+html[data-ub-font="xl"] body.clean-student{font-size:22px!important}
+html[data-ub-font="large"] body.clean-student :is(.side-link,.page-head p,.panel p,.panel label,.panel button,.record-list,.source-details,.answer-footer button,.topbar-title,.chat-messages,.chat-input){font-size:19px!important}
+html[data-ub-font="xl"] body.clean-student :is(.side-link,.page-head p,.panel p,.panel label,.panel button,.record-list,.source-details,.answer-footer button,.topbar-title,.chat-messages,.chat-input){font-size:22px!important}
+html[data-ub-font="large"] body.clean-student :is(.v11-role-trigger,.v11-role-option,.v11-language,.bottom-nav button){font-size:17px!important}
+html[data-ub-font="xl"] body.clean-student :is(.v11-role-trigger,.v11-role-option,.v11-language,.bottom-nav button){font-size:20px!important}
+/* Route submit buttons never crop on narrow screens. */
+.clean-student #route-form,.clean-student .route-fields,.clean-student .map-route,.clean-student .route-footer{min-width:0!important;max-width:100%!important;overflow:visible!important}
+.clean-student .route-footer{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.clean-student .route-footer .travel-choice{flex:1 1 320px;min-width:0;display:flex;gap:12px;flex-wrap:wrap}
+.clean-student .route-footer .send-btn{display:inline-flex!important;width:auto!important;max-width:100%!important;min-width:220px!important;height:auto!important;min-height:50px!important;white-space:normal;line-height:1.4;text-align:center;justify-content:center;overflow-wrap:anywhere;padding:10px 16px!important}
+@media(max-width:720px){.clean-student .route-fields{display:flex!important;flex-direction:column!important;gap:12px!important}.clean-student .route-footer{display:flex!important;flex-direction:column!important;align-items:stretch!important}.clean-student .route-footer .send-btn{width:100%!important;min-width:0!important;flex:0 0 auto}.clean-student .route-footer .travel-choice{flex:0 0 auto!important;width:100%;padding:0!important}.clean-student #page-map{padding:18px 10px 50px!important}}
+/* Accessible compact in-app feedback dialog. */
+.ub-report-dialog,.ub-calendar-dialog{width:min(580px,calc(100vw - 24px));max-height:86dvh;overflow:auto;border:1px solid #dcece1;border-radius:22px;padding:0;color:#173f2d;background:#fff;box-shadow:0 24px 70px #153b2b40}
+.ub-report-dialog::backdrop,.ub-calendar-dialog::backdrop{background:#18372b77;backdrop-filter:blur(3px)}
+.ub-report-dialog form{padding:24px;display:grid;gap:12px}
+.ub-report-dialog .ub-report-head,.ub-calendar-header{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ub-report-dialog h2,.ub-calendar-header h2{margin:0;font-size:23px;color:#204630}
+.ub-report-dialog .ub-report-head button,.ub-calendar-header button{height:40px;width:40px;border-radius:14px;border:1px solid #dce8df;background:#f7fbf8;font-size:26px}
+.ub-report-dialog label{font-size:16px;font-weight:650}
+.ub-report-dialog :is(select,textarea){font:inherit;border:1px solid #cadccf;border-radius:13px;padding:12px;width:100%;background:white;min-height:47px}
+.ub-report-dialog .ub-report-consent{display:flex;align-items:flex-start;gap:8px;font-size:14px;font-weight:500;line-height:1.6}
+.ub-report-dialog .ub-report-consent input{margin-top:5px;accent-color:#19714b}
+.ub-report-actions,.ub-calendar-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.ub-report-actions button,.ub-calendar-actions button,.ub-calendar-actions a,.ub-calendar-detail-btn{border-radius:12px;border:1px solid #c6e0d0;background:#eef8f0;color:#15543a;padding:10px 15px;font:inherit;font-size:14px;cursor:pointer;text-decoration:none;white-space:normal}
+.ub-report-actions .ub-primary{background:#247c54;color:#fff}
+.ub-calendar-dialog .ub-calendar-header{padding:20px 22px;border-bottom:1px solid #e1ece5}
+.ub-calendar-dialog .ub-calendar-body{padding:20px 22px;line-height:1.8}
+.ub-calendar-date{background:#e9f6ec;padding:12px 14px;border-radius:12px;font-weight:750;color:#165536}
+.ub-calendar-status{color:#647969}
+.ub-calendar-batch{background:#f2faf4;border:1px solid #d9e8dd;border-radius:16px;padding:16px;margin:14px 0}
+.ub-calendar-batch button{max-width:100%}
+.v101-calendar-event{display:flex!important;flex-wrap:wrap;gap:10px;align-items:center}
+.v101-calendar-detail{flex:1;min-width:min(240px,100%)}
+/* Directory hierarchies: school -> unit/college -> department/office */
+.ub-directory-hierarchy{display:grid;gap:14px;margin:16px 0}
+.ub-directory-group{border:1px solid #dbe7df;background:#fff;border-radius:16px;overflow:hidden}
+.ub-directory-group>summary{background:#f0f9f2;padding:15px 18px;font-size:18px;font-weight:750;cursor:pointer;color:#164b32}
+.ub-directory-group[open]>summary{border-bottom:1px solid #dbe7df}
+.ub-directory-inner{padding:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px}
+.ub-directory-inner .office-card{margin:0!important;min-width:0}
+.ub-directory-inner .office-card h2{font-size:17px;line-height:1.5}
+@media(max-width:720px){.ub-directory-inner{grid-template-columns:1fr}.ub-report-dialog form{padding:18px}}
+.clean-student #directory-results{display:block!important;grid-template-columns:none!important}
+.clean-student .ub-directory-level>h2{color:#154c32;font-size:22px;margin:18px 0}
+.clean-student .ub-directory-group{margin-bottom:10px}
+.clean-student .ub-directory-inner .office-card{width:100%}
+
+/* Layered answer detail card: summary -> key points -> source documents. */
+.clean-student .ub-detail-label{font-size:18px;font-weight:800;color:#164f36;margin:19px 0 8px}
+.clean-student .ub-detail-points{background:#f6faf7;border:1px solid #e1eee4;border-radius:15px;padding:16px 24px 16px 34px;line-height:1.8}
+.clean-student .ub-detail-metadata{background:#f0f8f2;border-radius:14px;padding:12px 16px;color:#335b43}
+.clean-student .ub-detail-metadata h4{margin:0 0 8px}
+.clean-student .ub-detail-metadata p{margin:4px 0}
+.clean-student .ub-source-excerpt-title{margin:12px 0 4px;color:#37624e}
+.clean-student .ub-detail-warning{border-left:3px solid #d18d4e;padding:12px;background:#fff8ee}
+/* Make back-office operations visibly distinct and easy to scan. */
+.clean-admin .admin-live .admin-kpi,.clean-admin .admin-dash-grid .panel,.clean-admin .panel[data-admin-panel]{border-radius:18px!important;border:1px solid #e0eae3!important;box-shadow:0 4px 15px #122f240a}
+.clean-admin [data-admin-panel="review"] .review-item,.clean-admin #feedback-detail .item{margin:10px 0;padding:16px;border:1px solid #dfeae2;border-radius:14px;background:#fbfdfb}
+.clean-admin #feedback-detail .item :is(input,textarea,select){max-width:100%;border-radius:12px;min-height:43px;margin:6px 8px 6px 0}
+
+/* v11.1.1 — navigation requests are feature actions, not regulations. */
+.clean-student .message.assistant .ub-nav-action{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin:12px 0 5px;max-width:100%;min-height:48px;border:1px solid #2e8361;border-radius:14px;background:#e9f7ee;color:#16583b;padding:11px 19px;font:inherit;font-weight:750;cursor:pointer}
+.clean-student .message.assistant .ub-nav-action:hover,.clean-student .message.assistant .ub-nav-action:focus-visible{background:#d9f2e3;outline:2px solid #89c7a1;outline-offset:2px}
+@media(max-width:720px){.clean-student .message.assistant .ub-nav-action{width:100%;white-space:normal}}

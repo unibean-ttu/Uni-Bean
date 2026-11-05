@@ -1,0 +1,11 @@
+/* Uni-Bean 9.1: truthful admin connection status and rapid review queue */
+.review-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:#f3faf7;border-radius:13px;padding:13px;margin:17px 0}
+.review-toolbar label{font-weight:750;font-size:14px}
+.review-toolbar select{min-width:170px;background:#fff;font-size:15px}
+.review-toolbar span{color:#687d7a;font-size:13px}
+#document-list .item{margin-bottom:9px}
+#status:not(.hidden),#message:not(.hidden){display:block!important;padding:15px;border:1px solid #eacbb2;background:#fff8ec;color:#80522e;border-radius:12px;white-space:pre-wrap}
+.rail nav .admin-tab:focus-visible,.rail nav a:focus-visible{outline:3px solid #12867a;outline-offset:2px}
+@media(max-width:860px){.review-toolbar{align-items:stretch}.review-toolbar select{width:100%}}
+
+.review-suggestions{margin-top:28px;border-top:1px solid #e1ece8;padding-top:20px}.review-suggestions h3{font-size:20px}.review-item{border:1px solid #e0ebe7;background:#fbfdfc;border-radius:11px;margin:8px 0;padding:12px 16px;display:flex;gap:6px;flex-wrap:wrap;flex-direction:column}.review-item small{color:#8e6246}

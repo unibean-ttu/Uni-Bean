@@ -1,0 +1,51 @@
+/* Uni-Bean v11: keep approved v10 visual language. Responsive, no duplicate overlay menus. */
+:root{--v11-border:#dce9e2;--v11-green:#1b6a49;--v11-ink:#173b2b}
+.clean-student .v10-brandcopy span{color:#246447;font-weight:750;font-size:15px}
+.clean-student .sidebar-brand .v10-brandmark{object-fit:contain}
+.clean-student .v11-role-picker{border:1px solid #bdd8c8;border-radius:999px!important;display:flex;align-items:center;gap:6px;padding:3px 10px!important;background:#fff;box-shadow:0 2px 8px #0e4b2c0b;min-height:45px}
+.clean-student .v11-role-picker select{border:none!important;appearance:none;-webkit-appearance:none;background:transparent;color:#143e2a;font-weight:750;outline:none;border-radius:999px!important;min-width:95px;padding:8px 20px 8px 3px;font-size:15px;cursor:pointer}
+.clean-student .v11-role-picker::after{content:'⌄';pointer-events:none;margin-left:-13px;color:#426b58;font-size:21px}
+.clean-student .v11-role-icon{font-size:20px;line-height:1}
+.clean-student .v11-language{border:1px solid #dce9e1;border-radius:999px;min-height:42px;padding:7px 9px;background:white;color:#184b36;font-weight:650;max-width:115px}
+.clean-student .v11-info-mini{background:#ecf8f1;border:1px solid #d3ebda;border-radius:12px;padding:10px 12px;font-size:.94rem;color:#326345}
+.clean-student .v11-answer-points{line-height:1.8;margin:9px 0 12px 22px;padding:0}
+.clean-student .message-text{white-space:pre-wrap;overflow-wrap:anywhere}
+.clean-student .v11-source-dialog{width:min(670px,calc(100vw - 28px));max-height:min(86dvh,860px);border:1px solid #dfeae4;border-radius:23px;padding:0;box-shadow:0 25px 70px #17352235;color:#1c3a29}
+.clean-student .v11-source-dialog::backdrop{background:#21382b6b;backdrop-filter:blur(2px)}
+.clean-student .v11-dialog-head{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;background:white;border-bottom:1px solid #e6eee8;padding:21px 24px;z-index:2}
+.clean-student .v11-dialog-head h2{font-size:23px;margin:0}
+.clean-student .v11-dialog-head button{border-radius:50%;background:#f3f8f4;border:1px solid #e0eae1;width:38px;height:38px;font-size:24px}
+.clean-student .v11-detail-body{padding:20px 24px;overflow-y:auto;max-height:70dvh}
+.clean-student .v11-detail-source{border:1px solid #e2eae4;padding:17px;border-radius:14px;margin:12px 0}
+.clean-student .v11-detail-source h4{margin:0 0 8px;font-size:18px}
+.clean-student .v11-detail-source small{display:block;color:#73877c;margin-bottom:9px}
+.clean-student .v11-detail-source p{white-space:pre-wrap;line-height:1.75;font-size:15px}
+.clean-student .v11-detail-source a{color:#08664c;font-weight:700;text-decoration:underline}
+html[data-ub-font="large"] body.clean-student .page-view,html[data-ub-font="large"] body.clean-student .message-text,html[data-ub-font="large"] body.clean-student .source-entry{font-size:20px!important}
+html[data-ub-font="xl"] body.clean-student .page-view,html[data-ub-font="xl"] body.clean-student .message-text,html[data-ub-font="xl"] body.clean-student .source-entry{font-size:23px!important}
+html[data-ub-font="large"] body.clean-student .page-view p,html[data-ub-font="large"] body.clean-student .page-view button,html[data-ub-font="large"] body.clean-student .message-text,html[data-ub-font="large"] body.clean-student .record{font-size:19px!important}
+html[data-ub-font="xl"] body.clean-student .page-view p,html[data-ub-font="xl"] body.clean-student .page-view button,html[data-ub-font="xl"] body.clean-student .message-text,html[data-ub-font="xl"] body.clean-student .record{font-size:22px!important}
+html[data-ub-font="large"] body.clean-student .side-link,html[data-ub-font="large"] body.clean-student .role-picker select{font-size:18px!important}
+html[data-ub-font="xl"] body.clean-student .side-link,html[data-ub-font="xl"] body.clean-student .role-picker select{font-size:21px!important}
+html[data-ub-font="xl"] body.clean-student .chat-input,html[data-ub-font="xl"] body.clean-student textarea{font-size:23px!important}
+@media(max-width:720px){.clean-student .v11-language{max-width:90px;font-size:12px}.clean-student .v11-role-picker{min-height:39px;padding:2px 5px!important}.clean-student .v11-role-picker select{min-width:75px;font-size:12px;padding:5px}.clean-student .v11-role-icon{font-size:17px}.clean-student .v11-role-picker::after{display:none}.clean-student .v11-dialog-head h2{font-size:19px}}
+
+/* Original user-provided transparent brand lockup, including exact slogan. */
+.clean-student .sidebar-brand{display:flex;align-items:center;position:relative}
+.clean-student .sidebar-brand .v10-brandmark{width:min(225px,80%)!important;height:auto!important;max-height:116px;flex:0 1 auto!important;object-fit:contain}
+.clean-student .sidebar-brand .v10-brandcopy{display:none!important}
+body.sidebar-collapsed.clean-student .sidebar-brand .v10-brandmark{width:50px!important;height:auto!important}
+@media(max-width:720px){.clean-student .sidebar-brand .v10-brandmark{width:165px!important}}
+
+/* Real role card popover with distinct icons; native select retained as hidden semantic fallback. */
+.clean-student .v11-role-picker{position:relative!important;padding:3px 5px!important}
+.clean-student .v11-role-picker>select{position:absolute;clip-path:inset(50%);height:1px!important;width:1px!important;min-width:1px!important;overflow:hidden;opacity:0;pointer-events:none;}
+.clean-student .v11-role-picker>.v11-role-icon{display:none}
+.clean-student .v11-role-picker::after{display:none}
+.clean-student .v11-role-trigger{border:0;background:transparent;display:flex;gap:9px;align-items:center;justify-content:space-between;padding:7px 13px;border-radius:999px;color:#184b36;font-family:inherit;font-size:16px;font-weight:700;line-height:1.3;cursor:pointer;min-width:142px}
+.clean-student .v11-role-trigger>span{font-size:19px}
+.clean-student .v11-role-menu{position:absolute;right:0;top:calc(100% + 9px);width:220px;max-height:min(65dvh,400px);overflow-y:auto;background:white;box-shadow:0 14px 40px #214a3333;border:1px solid #d4e5d9;border-radius:19px;padding:7px;z-index:900}
+.clean-student .v11-role-menu[hidden]{display:none!important}
+.clean-student .v11-role-option{font-family:inherit;font-size:16px;font-weight:600;line-height:1.4;color:#1f4431;border:0;border-radius:12px;background:transparent;display:block;text-align:left;width:100%;padding:13px 14px;cursor:pointer}
+.clean-student .v11-role-option:hover,.clean-student .v11-role-option[aria-selected="true"]{background:#e4f5e9;color:#105834}
+@media(max-width:720px){.clean-student .v11-role-trigger{min-width:102px;font-size:13px;padding:6px}.clean-student .v11-role-trigger>span{font-size:16px}.clean-student .v11-role-menu{width:190px}}
